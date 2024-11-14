@@ -3333,7 +3333,7 @@
 					}
 	
 					var titleSpan = $('span.dt-column-title', cell);
-	
+
 					structure[row][column] = {
 						cell: cell,
 						colspan: colspan,
@@ -8733,7 +8733,7 @@
 			}
 	
 			var span = $('span.dt-column-title', this.column(column).header(row));
-	
+
 			if (title !== undefined) {
 				span.html(title);
 				return this;
@@ -10769,14 +10769,14 @@
 			 * * `\_PAGE\_` - Current page number
 			 * * `\_PAGES\_` - Total number of pages of data in the table
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ _ENTRIES-TOTAL_",
+			"sInfo": "_TOTAL_ Records",
 	
 	
 			/**
 			 * Display information string for when the table is empty. Typically the
 			 * format of this string should match `info`.
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 _ENTRIES-TOTAL_",
+			"sInfoEmpty": "_TOTAL_ Records",
 	
 	
 			/**
@@ -10827,7 +10827,7 @@
 			 * with a default select list of 10, 25, 50 and 100, and can be replaced
 			 * with a custom select box if required.
 			 */
-			"sLengthMenu": "_MENU_ _ENTRIES_ per page",
+			"sLengthMenu": "",
 	
 	
 			/**

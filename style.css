@@ -116,8 +116,22 @@ body {
   font-size: 1.15rem;
   font-weight: 600;
 }
+#sidebar:not(.expand) .sidebar-logo
+{
+  img {
+    max-width: 50px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+    display: block; /* Ensure image is block-level */
+    border-radius: 10px; /* Optional: Rounded corners for a modern look */
+  }
+}
 
-#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) ul.sidebar-nav
+{
+  text-align: center !important;
+}
+
 #sidebar:not(.expand) a.sidebar-link span {
   display: none;
 }
@@ -178,7 +192,7 @@ a.sidebar-link:hover {
 #sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
   position: absolute;
   top: 0;
-  left: 70px;
+  left: 60px;
   background: var(--blue) !important;
   padding: 0;
   min-width: 15rem;
