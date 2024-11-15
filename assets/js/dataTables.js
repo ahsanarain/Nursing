@@ -4034,12 +4034,6 @@
 								.append(cell.childNodes)
 								.appendTo(cell);
 						}
-	
-						if ( isHeader && $('span.dt-column-order', cell).length === 0) {
-							$('<span>')
-								.addClass('dt-column-order')
-								.appendTo(cell);
-						}
 					}
 	
 					// If there is col / rowspan, copy the information into the layout grid
@@ -10854,7 +10848,7 @@
 			 * control over where it appears in the string. If "_INPUT_" is not given
 			 * then the input box is appended to the string automatically.
 			 */
-			"sSearch": "Search:",
+			"sSearch": "",
 	
 	
 			/**
@@ -10865,7 +10859,7 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.searchPlaceholder
 			 */
-			"sSearchPlaceholder": "",
+			"sSearchPlaceholder": "Search",
 	
 	
 			/**
