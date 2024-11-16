@@ -1,0 +1,74 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Users/create-faculty-account.html', 'content');" class="btn btn-primary">
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <h3 class="card-title mb-4">Update Account</h3>
+    <hr class="my-4">
+
+    <!-- Lecture Registration Section -->
+    <div class="card shadow-sm mb-4 registration-card">
+      <div class="card-body">
+        <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+
+          <!-- Student ID -->
+          <div class="col-md-6">
+            <label for="teacher-name" class="form-label">Student ID</label>
+            <input type="text" class="form-control" id="teacher-name" name="teacher-name" required>
+          </div>
+
+          <!-- EMI Number -->
+          <div class="col-md-6">
+            <label for="teacher-cnic" class="form-label">EMI Number</label>
+            <input type="text" class="form-control" id="teacher-cnic" name="teacher-cnic" required>
+          </div>
+
+          <!-- Role -->
+          <div class="col-md-6">
+            <label for="role" class="form-label">Role</label>
+            <select class="form-select" id="role" name="role" required>
+              <option selected disabled>Select Role</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Admin">Admin</option>
+            </select>
+          </div>
+
+          <!-- Old Password -->
+          <div class="col-md-6">
+            <label for="old-password" class="form-label">Old Password</label>
+            <input type="password" class="form-control" id="old-password" name="old-password" required>
+          </div>
+
+          <!-- New Password -->
+          <div class="col-md-6">
+            <label for="new-password" class="form-label">New Password</label>
+            <input type="password" class="form-control" id="new-password" name="new-password" required>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="col-md-6">
+            <label for="confirm-password" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+          </div>
+
+          <!-- Show Password -->
+          <div class="col-md-6 d-flex align-items-center">
+            <input type="checkbox" id="show-password" name="show-password">
+            <label for="show-password" class="form-label ms-2">Show Password</label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Update Password</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

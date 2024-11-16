@@ -1,0 +1,60 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Fees Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Staff Information</h3>
+      <hr class="my-4">
+
+      <!-- Add Student Button -->
+      <div class="row mb-4">
+        <div class="col-12 text-end">
+          <a href="#" onclick="Route('Reports/generate-staff-information-report.html', 'content');" class="btn btn-sm btn-primary" title="Add Student">
+            Generate Staff Report
+          </a>
+        </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center" style="width: 100%">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Designation</th>
+                <th>Qualification</th>
+                <th>Contact</th>
+                <th>CNIC</th>
+                <th>Photo</th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>Amir Khan</td>
+                <td>1</td>
+                <td>Developer</td>
+                <td>MIT</td>
+                <td>03322251904</td>
+                <td>4130631803181</td>
+                <td>
+                  <img src="images/NoGender.png" alt="Student Photo" class="img-thumbnail border-0 bg-transparent" style="width: 50px;">
+                </td>
+
+
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

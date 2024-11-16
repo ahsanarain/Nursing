@@ -1,0 +1,132 @@
+<main class="content py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Finance/add-student-fees.html', 'content');" class="btn btn-primary" >
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <h3 class="card-title fw-bold fs-4 mb-3">Add Fees</h3>
+    <hr class="my-4">
+
+    <!-- Fees Section -->
+    <div class="card shadow-sm mb-4 profile-card">
+      <div class="card-body">
+
+
+        <div class="row align-items-center bg-light p-3 rounded">
+          <!-- Image Section -->
+          <div class="col-md-2 col-sm-4 text-center mb-3 mb-md-0">
+            <img src="images/NoGender.png" alt="Student Photo" class="img-fluid rounded-circle border border-primary border-3 student-photo" style="max-width: 120px;">
+          </div>
+
+          <!-- Information Section -->
+          <div class="col-md-10 col-sm-8">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="mb-2"><strong>ID:</strong> <span>12345</span></p>
+                <p class="mb-2"><strong>Candidate Name:</strong> <span>Amir Khan</span></p>
+                <p class="mb-2"><strong>Father's Name:</strong> <span>John Doe</span></p>
+
+              </div>
+              <div class="col-md-6">
+                <p class="mb-2"><strong>Course:</strong> <span>Computer Science</span></p>
+                <p class="mb-2"><strong>Session:</strong> <span>2021-2022</span></p>
+                <p class="mb-2"><strong>Package:</strong> <span>Full Package</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="card shadow-sm question-card">
+      <div class="card-body">
+
+        <!-- Add Fees Form -->
+        <form id="addFeesForm" action="" onsubmit="return AddForm();" method="post">
+          <div class="row g-3">
+
+            <!-- Fees Amount -->
+            <div class="col-md-4">
+              <label for="fees" class="form-label"><strong>Fees Amount</strong></label>
+              <input type="number" class="form-control" id="fees" name="fees" placeholder="Enter fees amount" required>
+            </div>
+
+            <!-- Pay Date -->
+            <div class="col-md-4">
+              <label for="pay_date" class="form-label"><strong>Pay Date</strong></label>
+              <input type="date" class="form-control" id="pay_date" name="pay_date" required>
+            </div>
+
+            <!-- Fees Type -->
+            <div class="col-md-4">
+              <label for="fees_type" class="form-label"><strong>Fees Type</strong></label>
+              <select class="form-select" id="fees_type" name="fees_type" required>
+                <option value="">Select Fees Type</option>
+                <option value="admission">Admission</option>
+                <option value="tuition">Tuition</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+
+            <!-- Payment Mode -->
+            <div class="col-md-4">
+              <label for="payment_mode" class="form-label"><strong>Payment Mode</strong></label>
+              <select class="form-select" id="payment_mode" name="payment_mode" required>
+                <option value="">Select Payment Mode</option>
+                <option value="cash">Cash</option>
+                <option value="bank_transfer">Bank Transfer</option>
+                <option value="credit_card">Credit Card</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+
+            <!-- Cash Payment -->
+            <div class="col-md-4">
+              <label for="cash_payment" class="form-label"><strong>Cash Payment</strong></label>
+              <input type="number" class="form-control" id="cash_payment" name="cash_payment" placeholder="Enter cash payment" required>
+            </div>
+
+            <!-- Online Payment Option -->
+            <div class="col-md-4">
+              <label for="online_option" class="form-label"><strong>Online Payment Option</strong></label>
+              <select class="form-select" id="online_option" name="online_option" required>
+                <option value="">Select Online Option</option>
+                <option value="paypal">PayPal</option>
+                <option value="stripe">Stripe</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+
+            <!-- Due Amount -->
+            <div class="col-md-4">
+              <label for="due_amount" class="form-label"><strong>Due Amount</strong></label>
+              <input type="number" class="form-control" id="due_amount" name="due_amount" placeholder="Enter due amount" required>
+            </div>
+
+            <!-- Joining & Relieving Date -->
+            <div class="col-md-4">
+              <label for="join_rel_date" class="form-label"><strong>Joining & Relieving Date</strong></label>
+              <input type="text" class="form-control" id="join_rel_date" name="join_rel_date" placeholder="E.g. 2023-09-22" required>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="d-flex justify-content-end gap-2 mt-3">
+              <button type="submit" class="btn btn-primary" id="saveBtn">Add Fees</button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>

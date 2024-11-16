@@ -1,0 +1,100 @@
+<main class="content py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Finance/income.html', 'content');" class="btn btn-primary" >
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <h3 class="card-title fw-bold fs-4 mb-3">Income Portal</h3>
+    <hr class="my-4">
+
+    <!-- Fees Section -->
+    <div class="card shadow-sm mb-4 profile-card">
+      <div class="card-body">
+
+
+        <div class="row align-items-center bg-light p-3 rounded">
+          <!-- Image Section -->
+          <div class="col-md-2 col-sm-4 text-center mb-3 mb-md-0">
+            <img src="images/NoGender.png" alt="Student Photo" class="img-fluid rounded-circle border border-primary border-3 student-photo" style="max-width: 120px;">
+          </div>
+
+          <!-- Information Section -->
+          <div class="col-md-10 col-sm-8">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="mb-2"><strong>ID:</strong> <span>12345</span></p>
+                <p class="mb-2"><strong>Candidate Name:</strong> <span>Amir Khan</span></p>
+                <p class="mb-2"><strong>Father's Name:</strong> <span>John Doe</span></p>
+
+              </div>
+              <div class="col-md-6">
+                <p class="mb-2"><strong>Course:</strong> <span>Computer Science</span></p>
+                <p class="mb-2"><strong>Session:</strong> <span>2021-2022</span></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Student Registration Section -->
+    <div class="card shadow-sm mb-4 registration-card">
+      <div class="card-body">
+
+        <form id="updateForm" action="" onsubmit="return AddForm();" method="post">
+          <div class="row g-3">
+
+            <!-- Payment Mode -->
+            <div class="col-md-4">
+              <label for="paymentMode" class="form-label"><strong>Payment Mode</strong></label>
+              <select class="form-select" id="paymentMode" name="paymentMode" required>
+                <option selected disabled>Select Payment Mode</option>
+                <option value="Cash">Cash</option>
+                <option value="Card">Card</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+              </select>
+            </div>
+
+            <!-- Pay Date -->
+            <div class="col-md-4">
+              <label for="payDate" class="form-label"><strong>Date</strong></label>
+              <input type="date" class="form-control" id="payDate" name="payDate" value="2021-01-01" required>
+            </div>
+
+            <!-- Bill No -->
+            <div class="col-md-4">
+              <label for="billNo" class="form-label"><strong>Bill No</strong></label>
+              <input type="text" class="form-control" id="billNo" name="billNo" value="2103" required>
+            </div>
+
+            <!-- Description -->
+            <div class="col-md-4">
+              <label for="description" class="form-label"><strong>Description</strong></label>
+              <textarea class="form-control" id="description" name="description" rows="1" placeholder="Enter Description" required></textarea>
+            </div>
+
+            <!-- Cost -->
+            <div class="col-md-4">
+              <label for="cost" class="form-label"><strong>Cost</strong></label>
+              <input type="text" class="form-control" id="cost" name="cost" value="2103" required>
+            </div>
+
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="d-flex justify-content-end gap-2 mt-3">
+            <button type="submit" class="btn btn-primary" id="updateBtn">Add</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>

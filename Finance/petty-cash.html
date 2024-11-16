@@ -1,0 +1,184 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Expenses Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-4 ">Petty Cash Management</h3>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-12">
+
+
+
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+
+              <form class="row gy-3" action="" onsubmit="return AddForm();" method="post">
+                <!-- Initial Amount Section -->
+                <div class="col-md-4">
+                  <label for="initial-amount" class="form-label">Initial Amount</label>
+                  <input type="number" class="form-control" id="initial-amount" placeholder="Enter initial amount">
+                </div>
+                <div class="col-md-4">
+                  <label for="date" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="date">
+                </div>
+                <div class="col-md-4">
+                  <label for="source" class="form-label">Source</label>
+                  <input type="text" class="form-control" id="source" placeholder="Enter source">
+                </div>
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn btn-primary">Set Initial Amount</button>
+                </div>
+              </form>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="row">
+        <div class="col-12">
+
+
+          <!-- Student Registration Section -->
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+
+              <form class="row gy-3" action="" onsubmit="return AddForm();" method="post">
+                <!-- Transaction Section -->
+                <div class="col-md-3">
+                  <label for="date" class="form-label">Transaction Date</label>
+                  <input type="date" class="form-control" id="date">
+                </div>
+                <div class="col-md-3">
+                  <label for="purpose" class="form-label">Purpose</label>
+                  <input type="text" class="form-control" id="purpose" placeholder="Enter bill number">
+                </div>
+                <div class="col-md-3">
+                  <label for="bill-no" class="form-label">Bill No</label>
+                  <input type="text" class="form-control" id="bill-no" placeholder="Enter bill number">
+                </div>
+                <div class="col-md-3">
+                  <label for="amount" class="form-label">Amount</label>
+                  <input type="number" class="form-control" id="amount" placeholder="Enter amount">
+                </div>
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn btn-success">Add Transaction</button>
+                </div>
+              </form>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <!-- Edit Transaction Section -->
+      <div class="row">
+        <div class="col-12">
+
+
+
+          <!-- Student Registration Section -->
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+
+              <form class="row gy-3" action="" onsubmit="return AddForm();" method="post">
+                <div class="col-md-4">
+                  <label for="select-initial" class="form-label">Amount</label>
+                  <select class="form-select" aria-label="select-initial" id="select-initial">
+                    <option selected>Select an amount</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label for="edit-amount" class="form-label">Edit Amount</label>
+                  <input type="number" class="form-control" id="edit-amount" placeholder="Enter new amount">
+                </div>
+                <div class="col-md-4">
+                  <label for="edit-date" class="form-label">Edit Date</label>
+                  <input type="date" class="form-control" id="edit-date">
+                </div>
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
+                  <button type="reset" class="btn btn-danger">Delete</button>
+                </div>
+              </form>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <!-- Transactions Table -->
+      <h3 class="fw-bold fs-4 my-3">Transaction History</h3>
+      <div class="row">
+        <div class="col-12">
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Date</th>
+                <th>Purpose</th>
+                <th>Bill No</th>
+                <th>Move</th>
+                <th>Amount</th>
+                <th>Balance</th>
+                <th>Action</th>
+                <th>Move</th>
+                <th>Petty Cash</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td><input type="date" class="form-control form-control-sm"></td>
+                <td><input type="text" class="form-control form-control-sm" value="Mile, Tea"></td>
+                <td><input type="text" class="form-control form-control-sm" value="01"></td>
+                <td>
+                  <button class="btn btn-sm btn-outline-danger" title="Move Up">
+                    <i class="bi bi-arrow-up"></i>
+                  </button>
+                </td>
+                <td><input type="number" class="form-control form-control-sm" value="840"></td>
+                <td>136776</td>
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+                    <button class="btn btn-sm btn-outline-success" title="Edit">
+                      Save
+                    </button>
+                    <button class="btn btn-sm btn-outline-danger" title="Delete">
+                      Delete
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-outline-success" title="Move Down">
+                    <i class="bi bi-arrow-down"></i>
+                  </button>
+                </td>
+                <td>136566</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>

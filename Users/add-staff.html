@@ -1,0 +1,100 @@
+<main class="content py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Users/staff-record.html', 'content');" class="btn btn-primary">
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <h3 class="card-title fw-bold fs-4 mb-3">Add Staff</h3>
+    <hr class="my-4">
+
+    <div class="card shadow-sm question-card">
+      <div class="card-body">
+
+        <!-- Add Fees Form -->
+        <form id="addFeesForm" action="" onsubmit="return AddForm();" method="post">
+          <div class="row g-3">
+
+            <!-- Name -->
+            <div class="col-md-6">
+              <label for="name" class="form-label"><strong>Name</strong></label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
+            </div>
+
+            <!-- Father Name -->
+            <div class="col-md-6">
+              <label for="father-name" class="form-label"><strong>Father Name</strong></label>
+              <input type="text" class="form-control" id="father-name" name="father-name" placeholder="Enter Father Name" required>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="col-md-6">
+              <label for="dob" class="form-label"><strong>Date of Birth</strong></label>
+              <input type="date" class="form-control" id="dob" name="dob" required>
+            </div>
+
+            <!-- Designation -->
+            <div class="col-md-6">
+              <label for="designation" class="form-label"><strong>Designation</strong></label>
+              <input type="text" class="form-control" id="designation" name="designation" placeholder="Enter Designation" required>
+            </div>
+
+            <!-- CNIC -->
+            <div class="col-md-6">
+              <label for="cnic" class="form-label"><strong>CNIC</strong></label>
+              <input type="text" class="form-control" id="cnic" name="cnic" placeholder="Enter CNIC" required>
+            </div>
+
+            <!-- Qualification -->
+            <div class="col-md-6">
+              <label for="qualification" class="form-label"><strong>Qualification</strong></label>
+              <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Enter qualification" required>
+            </div>
+
+            <!-- Date of Appointment -->
+            <div class="col-md-6">
+              <label for="appointment_date" class="form-label"><strong>Date of Appointment</strong></label>
+              <input type="date" class="form-control" id="appointment_date" name="appointment_date" required>
+            </div>
+
+            <!-- Year of Experience -->
+            <div class="col-md-6">
+              <label for="experience" class="form-label"><strong>Year of Experience</strong></label>
+              <input type="text" class="form-control" id="experience" name="experience" placeholder="Enter years of experience" required>
+            </div>
+
+            <!-- Registration Number -->
+            <div class="col-md-6">
+              <label for="registration_number" class="form-label"><strong>Registration Number</strong></label>
+              <input type="text" class="form-control" id="registration_number" name="registration_number" placeholder="Enter registration number" required>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-6">
+              <label for="contact" class="form-label"><strong>Contact</strong></label>
+              <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter contact number" required>
+            </div>
+
+            <!-- Upload Photo -->
+            <div class="col-md-6">
+              <label for="photo" class="form-label"><strong>Upload Photo</strong></label>
+              <input type="file" class="form-control" id="photo" name="photo" required>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="col-12 d-flex justify-content-end gap-2 mt-3">
+              <button type="submit" class="btn btn-primary" id="addBillBtn">Add Staff</button>
+              <button type="button" class="btn btn-secondary" id="closeBtn">Close</button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</main>

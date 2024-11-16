@@ -1,0 +1,71 @@
+<main class="content py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Attendance/leave.html', 'content');" class="btn btn-primary">
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <h3 class="card-title fw-bold fs-4 mb-3">Apply Leave</h3>
+    <hr class="my-4">
+
+    <div class="card shadow-sm question-card">
+      <div class="card-body">
+
+        <!-- Leave Application Form -->
+        <form id="leaveApplicationForm" action="" onsubmit="return AddForm();" method="post">
+          <div class="row g-3">
+
+            <!-- Name -->
+            <div class="col-md-6">
+              <label for="name" class="form-label"><strong>Name</strong></label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
+            </div>
+
+            <!-- Leave From -->
+            <div class="col-md-6">
+              <label for="leaveFrom" class="form-label"><strong>Leave From</strong></label>
+              <input type="date" class="form-control" id="leaveFrom" name="leaveFrom" required>
+            </div>
+
+            <!-- Leave To -->
+            <div class="col-md-6">
+              <label for="leaveTo" class="form-label"><strong>Leave To</strong></label>
+              <input type="date" class="form-control" id="leaveTo" name="leaveTo" required>
+            </div>
+
+            <!-- Leave Type -->
+            <div class="col-md-6">
+              <label class="form-label"><strong>Leave Type</strong></label>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="emergencyLeave" name="leaveType" value="emergency" required>
+                <label for="emergencyLeave" class="form-check-label">Emergency Leave</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="sickLeave" name="leaveType" value="sick" required>
+                <label for="sickLeave" class="form-check-label">Sick Leave</label>
+              </div>
+            </div>
+
+            <!-- Reason for Leave -->
+            <div class="col-md-12">
+              <label for="reason" class="form-label"><strong>Reason for Leave</strong></label>
+              <textarea class="form-control" id="reason" name="reason" rows="3" placeholder="Enter reason for leave" required></textarea>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="col-12 d-flex justify-content-end gap-2 mt-3">
+              <button type="submit" class="btn btn-primary" id="applyBtn">Apply</button>
+              <button type="button" class="btn btn-secondary" id="closeBtn">Close</button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</main>

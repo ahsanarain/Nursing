@@ -1,0 +1,73 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Finance/expenses-report.html', 'content');" class="btn btn-primary" >
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <!-- Logo Section -->
+    <div class="text-center mb-4">
+      <img src="../images/logo.jpeg" alt="Logo" class="img-fluid" style="max-width: 200px;">
+    </div>
+
+    <!-- Expenses Section -->
+    <div class="mb-5">
+      <h3 class="fw-bold fs-4 mb-4 text-center">Expenses Report from 20-09-2024 to 22-09-2024</h3>
+      <hr class="my-4">
+
+      <!-- Print Button -->
+      <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+      </div>
+
+      <!-- Table Section -->
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table class="table table-hover table-bordered table-striped text-center">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Father Name</th>
+                <th>Designation</th>
+                <th>Qualification</th>
+                <th>Contact</th>
+                <th>Date of Birth</th>
+                <th>Date of Appointment</th>
+                <th>Experience</th>
+              </tr>
+              </thead>
+              <tbody>
+              <!-- Dynamic rows will be inserted here -->
+              <tr>
+                <td>1</td>
+                <td>20-09-2024</td>
+                <td>1234</td>
+                <td>$500</td>
+                <td>Office supplies</td>
+                <td>21-09-2024</td>
+              </tr>
+              <!-- Repeat or dynamically generate more rows as needed -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Total Amount -->
+          <div class="d-flex justify-content-end mt-3">
+            <h5 class="fw-bold">Total Amount: <span>$500</span></h5>
+          </div>
+
+          <!-- Total Amount -->
+          <div class="d-flex justify-content-center mt-3">
+            <h5 class="fw-bold">PRINCIPAL Allied Institute of Nursing and Health Science</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,140 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Fees Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Student Record</h3>
+
+      <hr class="my-4">
+      <!-- Add Student Button -->
+      <div class="row mb-4">
+        <div class="col-12 text-end">
+          <a href="#" onclick="Route('Users/registration-form.html', 'content');" class="btn btn-sm btn-primary" >
+            Add Student
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+
+
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+
+              <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+
+
+                <!-- To Date / Session Select -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="course" class="form-label">Course</label>
+                  <select class="form-select" id="course" name="course">
+                    <option selected disabled>Please Select Course</option>
+                    <option value="session1">Course 1</option>
+                    <option value="session2">Course 2</option>
+                    <option value="session3">Course 3</option>
+                    <!-- Add more sessions as needed -->
+                  </select>
+                </div>
+
+
+
+                <div class="col-md-6 col-lg-4">
+                  <label for="session" class="form-label">Session</label>
+                  <select class="form-select" id="session" name="session">
+                    <option selected disabled>Please Select Session</option>
+                    <option value="session1">Session 1</option>
+                    <option value="session2">Session 2</option>
+                    <option value="session3">Session 3</option>
+                    <!-- Add more sessions as needed -->
+                  </select>
+                </div>
+
+
+
+                <div class="col-12 col-lg-4 d-flex align-items-end">
+                  <button type="submit" class="btn btn-primary w-100">Search</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center" style="width: 100%">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Student Name</th>
+                <th>ID</th>
+                <th>CNIC</th>
+                <th>Course</th>
+                <th>Session</th>
+                <th>Transcript</th>
+                <th>Document</th>
+                <th>Photo</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>Ahmed Khan</td>
+                <td>1145</td>
+                <td>4240112180055</td>
+                <td>Generic BSN</td>
+                <td>GBSN-2024-27</td>
+                <td>
+                  <div class="form-group">
+                    <select id="transcriptSelect" class="form-select" aria-label="Select Transcript">
+                      <option selected>Select Transcript</option>
+                      <option value="1">Transcript 1</option>
+                      <option value="2">Transcript 2</option>
+                      <option value="3">Transcript 3</option>
+                    </select>
+                  </div>
+                </td>
+
+                <td>
+                  <div class="form-group">
+                    <select id="documentSelect" class="form-select" aria-label="Select Document">
+                      <option selected>Select Document</option>
+                      <option value="1">document 1</option>
+                      <option value="2">document 2</option>
+                      <option value="3">document 3</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <img src="images/NoGender.png" alt="Student Photo" class="img-thumbnail border-0 bg-transparent" style="width: 50px;">
+                </td>
+
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+                    <a href="#" onclick="Route('Users/view-student-record.html', 'content');" class="btn btn-sm btn-outline-success" title="View">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" onclick="Route('Users/edit-student-record.html', 'content');" class="btn btn-sm btn-outline-primary" title="Edit">
+                      <i class="bi bi-pencil"></i>
+                    </a>
+                    <a class="btn btn-sm btn-outline-danger" title="Delete">
+                      <i class="bi bi-trash"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

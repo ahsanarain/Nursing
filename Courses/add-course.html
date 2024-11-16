@@ -1,0 +1,58 @@
+<main class="content py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Courses/course.html', 'content');" class="btn btn-primary">
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <h3 class="card-title fw-bold fs-4 mb-3">Add Courses / Program</h3>
+    <hr class="my-4">
+
+    <div class="card shadow-sm question-card">
+      <div class="card-body">
+
+        <!-- Add Course Form -->
+        <form id="addCourseForm" action="" onsubmit="return AddForm();" method="post">
+          <div class="row g-3">
+
+            <!-- Category -->
+            <div class="col-md-6">
+              <label for="category" class="form-label"><strong>Category</strong></label>
+              <input type="text" class="form-control" id="category" name="category" placeholder="Enter category" required>
+            </div>
+
+            <!-- Course / Program -->
+            <div class="col-md-6">
+              <label for="courseProgram" class="form-label"><strong>Course / Program</strong></label>
+              <input type="text" class="form-control" id="courseProgram" name="courseProgram" placeholder="Enter course/program" required>
+            </div>
+
+            <!-- Introduction -->
+            <div class="col-md-6">
+              <label for="introduction" class="form-label"><strong>Introduction (Separate by ;)</strong></label>
+              <input type="text" class="form-control" id="introduction" name="introduction" placeholder="Enter introduction" required>
+            </div>
+
+            <!-- Criteria -->
+            <div class="col-md-6">
+              <label for="criteria" class="form-label"><strong>Criteria (Separate by ;)</strong></label>
+              <input type="text" class="form-control" id="criteria" name="criteria" placeholder="Enter criteria" required>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="col-12 d-flex justify-content-end gap-2 mt-3">
+              <button type="submit" class="btn btn-primary" id="addCourseBtn">Add Course</button>
+              <button type="button" class="btn btn-secondary" id="closeBtn">Cancel</button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</main>

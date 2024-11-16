@@ -1,0 +1,213 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Expenses Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-4">Transcript</h3>
+      <hr class="my-4" />
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+              <form class="row gy-3" action="" onsubmit="return AddForm();" method="post">
+                <h4 class="fw-bold fs-4 mb-4">
+                  Student Grade Input Form
+                </h4>
+                <hr class="my-2" />
+
+                <!-- Enrollment No -->
+                <div class="col-md-12">
+                  <label for="enrollment-no" class="form-label"
+                  >Enrollment No</label
+                  >
+                  <input
+                          type="number"
+                          class="form-control"
+                          id="enrollment-no"
+                          placeholder="Enter enrollment number"
+                  />
+                </div>
+                <!-- Seat No -->
+                <div class="col-md-4">
+                  <label for="seat-no" class="form-label"
+                  >Seat No</label
+                  >
+                  <input
+                          type="number"
+                          class="form-control"
+                          id="seat-no"
+                          placeholder="Enter seat number"
+                  />
+                </div>
+                <!-- Candidate's Name -->
+                <div class="col-md-4">
+                  <label for="candidate-name" class="form-label"
+                  >Candidate's Name</label
+                  >
+                  <input
+                          type="text"
+                          class="form-control"
+                          id="candidate-name"
+                          placeholder="Enter candidate's name"
+                  />
+                </div>
+                <!-- Father Name -->
+                <div class="col-md-4">
+                  <label for="father-name" class="form-label"
+                  >Father Name</label
+                  >
+                  <input
+                          type="text"
+                          class="form-control"
+                          id="father-name"
+                          placeholder="Enter father's name"
+                  />
+                </div>
+                <!-- CNIC -->
+                <div class="col-md-4">
+                  <label for="cnic" class="form-label">CNIC</label>
+                  <input
+                          type="text"
+                          class="form-control"
+                          id="cnic"
+                          placeholder="Enter CNIC"
+                  />
+                </div>
+                <!-- Course -->
+                <div class="col-md-4">
+                  <label for="course" class="form-label">Course</label>
+                  <input
+                          type="text"
+                          class="form-control"
+                          id="course"
+                          placeholder="Enter course"
+                  />
+                </div>
+                <!-- Session -->
+                <div class="col-md-4">
+                  <label for="session" class="form-label"
+                  >Session</label
+                  >
+                  <input
+                          type="text"
+                          class="form-control"
+                          id="session"
+                          placeholder="Enter session"
+                  />
+                </div>
+                <!-- Semester -->
+                <div class="col-md-4">
+                  <label for="semester" class="form-label"
+                  >Semester</label
+                  >
+                  <select class="form-select" id="semester">
+                    <option value="">Select Semester</option>
+                    <!-- Add more semesters as needed -->
+                  </select>
+                </div>
+                <!-- Student Image -->
+                <div class="col-md-4">
+                  <label for="student-image" class="form-label"
+                  >Student Image</label
+                  >
+                  <input
+                          type="file"
+                          class="form-control"
+                          id="student-image"
+                  />
+                </div>
+                <!-- Image Preview -->
+                <div class="col-md-4">
+                  <label for="photoPreview" class="form-label"
+                  ><strong>Photo Preview</strong></label
+                  >
+                  <img
+                          id="photoPreview"
+                          src="images/NoGender.png"
+                          alt="Photo Preview"
+                          class="img-thumbnail"
+                          style="display: block; width: 100px"
+                  />
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn btn-primary">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <!-- Transactions Table -->
+      <h3 class="fw-bold fs-4 my-3">Transaction History</h3>
+      <div class="row">
+        <div class="col-12">
+          <div class="table-responsive">
+            <table
+                    id="myTable"
+                    class="table table-hover table-bordered table-striped text-center"
+            >
+              <thead class="table-primary">
+              <tr>
+                <th>Course</th>
+                <th>Course Code</th>
+                <th>Description</th>
+                <th>Credit Hours</th>
+                <th>Grade</th>
+                <th>Grade Points</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <input
+                          type="text"
+                          class="form-control form-control-sm"
+                  />
+                </td>
+                <td>
+                  <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          value="Mile, Tea"
+                  />
+                </td>
+                <td>
+                  <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          value="01"
+                  />
+                </td>
+                <td>
+                  <input
+                          type="text"
+                          class="form-control form-control-sm"
+                  />
+                </td>
+                <td>
+                  <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          value="Mile, Tea"
+                  />
+                </td>
+                <td>
+                  <input
+                          type="text"
+                          class="form-control form-control-sm"
+                          value="01"
+                  />
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

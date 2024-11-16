@@ -1,0 +1,56 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Fees Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Absent Warning</h3>
+
+      <hr class="my-4">
+
+
+
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center" style="width: 100%">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Student Name</th>
+                <th>ID</th>
+                <th>Course</th>
+                <th>Session</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>Abdullah</td>
+                <td>1</td>
+                <td>General Nursing</td>
+                <td>GBSN-2021-24</td>
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+                    <!-- <a href="fees-summary.html" class="btn btn-sm btn-outline-success" title="View">
+                      <i class="bi bi-eye"></i>
+                  </a> -->
+                    <a href="#" onclick="Route('Reports/generate-absent-warning.html', 'content');" class="btn btn-sm btn-outline-primary" title="Edit">
+                      <i class="bi bi-pencil"></i>
+                    </a>
+
+                  </div>
+
+
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>

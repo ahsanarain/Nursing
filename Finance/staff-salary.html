@@ -1,0 +1,67 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Expenses Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Add Staff Expenses</h3>
+
+      <hr class="my-4">
+
+      <!-- Add Expenses and Print Report Buttons -->
+      <div class="row mb-4">
+        <div class="col-12 text-end">
+          <a href="#" onclick="Route('Finance/add-staff-salary.html', 'content');" class="btn btn-sm btn-primary me-2" title="Add Expenses">
+            Add Salary / Expenses
+          </a>
+          <a href="#" onclick="Route('Finance/staff-salary-report.html', 'content');" class="btn btn-sm btn-primary" title="Print Report">
+            Print Report
+          </a>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Staff Name</th>
+                <th>Month</th>
+                <th>Dispatch Date</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>Ameer Ali</td>
+                <td>Jan-2024</td>
+                <td>01-05-2024</td>
+                <td>500</td>
+                <td>Advance</td>
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+
+                    <a href="#" onclick="Route('Finance/edit-staff-salary.html', 'content');" class="btn btn-sm btn-outline-primary" title="Edit">
+                      <i class="bi bi-pencil"></i>
+                    </a>
+                    <button class="btn btn-sm btn-outline-danger" title="Delete">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</main>

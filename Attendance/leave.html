@@ -1,0 +1,91 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Fees Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Leave Dashboard</h3>
+
+      <hr class="my-4">
+      <!-- Add Student Button -->
+      <div class="row mb-4">
+        <div class="col-12 text-end">
+          <a href="#" onclick="Route('Attendance/apply-leave.html', 'content');" class="btn btn-sm btn-primary" title="Apply Leave">
+            Apply Leave
+          </a>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center" style="width: 100%">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>ID</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>Ameer</td>
+                <td>12345</td>
+                <td>2024-09-01</td>
+                <td>2024-09-10</td>
+                <td>
+                  <!-- Accordion for Reason -->
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          View
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Sick Leave
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </td>
+                <td>
+                  <button class="btn btn-outline-success">Approved</button>
+                </td>
+                <td>
+                  <!-- Form with radio buttons and submit -->
+                  <form action="" method="post" class="d-flex align-items-center gap-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="status" id="approve1" value="approved">
+                      <label class="form-check-label" for="approve1">Approve</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="status" id="reject1" value="rejected">
+                      <label class="form-check-label" for="reject1">Reject</label>
+                    </div>
+                    <button type="submit" class="btn btn-outline-success"><i class="bi bi-check-lg"></i> </button>
+                    <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i> </button>
+                  </form>
+                </td>
+              </tr>
+              <!-- Additional rows can be added here with unique ids -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</main>

@@ -1,0 +1,62 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Reports/authority-letter.html', 'content');" class="btn btn-primary">
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <!-- Expenses Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-4">Authority Letter</h3>
+
+      <hr class="my-4">
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+              <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+                <!-- Examination Board -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="exam-board" class="form-label">Examination Board</label>
+                  <select class="form-select" id="exam-board" name="exam-board">
+                    <option value="">Select Board</option>
+                    <option value="Board1">Board 1</option>
+                    <option value="Board2">Board 2</option>
+                    <option value="Board3">Board 3</option>
+                    <!-- Add more boards as needed -->
+                  </select>
+                </div>
+
+                <!-- Examination Session -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="exam-session" class="form-label">Examination Session</label>
+                  <input type="text" class="form-control" id="exam-session" name="exam-session">
+                </div>
+
+                <!-- Roll No -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="roll-no" class="form-label">Roll No</label>
+                  <input type="text" class="form-control" id="roll-no" name="roll-no">
+                </div>
+
+                <!-- Examination Month -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="exam-month" class="form-label">Examination Month</label>
+                  <input type="text" class="form-control" id="exam-month" name="exam-month">
+                </div>
+
+                <!-- Generate Button -->
+                <div class="col-12 col-lg-4 d-flex align-items-end">
+                  <button type="submit" class="btn btn-primary w-100">Generate Report</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

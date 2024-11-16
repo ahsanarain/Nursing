@@ -1,0 +1,131 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- SMS Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-4 ">Generate Questions</h3>
+      <hr class="my-4">
+
+      <!-- Form Section -->
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+              <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+                <!-- Subject Select -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="subject" class="form-label"><strong>Subject</strong></label>
+                  <select class="form-select" id="subject" name="subject">
+                    <option selected disabled>All Subjects</option>
+                    <option value="course1">Course 1</option>
+                    <option value="course2">Course 2</option>
+                    <option value="course3">Course 3</option>
+                  </select>
+                </div>
+
+                <!-- Question Type Select -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="question-type" class="form-label"><strong>Question Type</strong></label>
+                  <select class="form-select" id="question-type" name="question-type">
+                    <option selected disabled>MCQs</option>
+                    <option value="type1">Type 1</option>
+                    <option value="type2">Type 2</option>
+                    <option value="type3">Type 3</option>
+                  </select>
+                </div>
+
+                <!-- Session Select -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="unit-no" class="form-label"><strong>Session</strong></label>
+                  <select class="form-select" id="unit-no" name="unit-no">
+                    <option selected disabled>Please Select</option>
+                    <option value="session1">Session 1</option>
+                    <option value="session2">Session 2</option>
+                    <option value="session3">Session 3</option>
+                  </select>
+                </div>
+
+                <!-- Search Button -->
+                <div class="col-md-4">
+                  <button type="submit" class="btn btn-primary w-100"><i class="fas fa-search"></i> Search</button>
+                </div>
+
+
+                <!-- Buttons in the Same Row: Search, Generate Paper, and Clear -->
+                <div class="col-12">
+                  <div class="row">
+
+                    <!-- Save Question Button (Separate Row) -->
+                    <div class="col-12 col-lg-4">
+                      <button class="btn btn-secondary w-100"><i class="fas fa-save"></i> Save Question</button>
+                    </div>
+
+
+                    <!-- Generate Paper Button -->
+                    <div class="col-md-4">
+                      <button class="btn btn-success w-100"><i class="fas fa-file-alt"></i> Process to Generate Paper</button>
+                    </div>
+
+                    <!-- Clear Saved Questions Button -->
+                    <div class="col-md-4">
+                      <button class="btn btn-danger w-100"><i class="fas fa-trash-alt"></i> Clear Saved Questions</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center" style="width: 100%">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
+                <th>Question</th>
+                <th>Question Type</th>
+                <th>Subject</th>
+                <th>Level</th>
+                <th>Unit</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                <td>Test</td>
+                <td>MCQ</td>
+                <td>Microbiology</td>
+                <td>Easy</td>
+                <td>Unit- I History of Nursing & Development of Nursing</td>
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+
+                    <a href="#" onclick="Route('QuestionBank/edit-question.html', 'content');" class="btn btn-sm btn-outline-primary" title="Edit">
+                      <i class="bi bi-pencil"></i>
+                    </a>
+                    <button class="btn btn-sm btn-outline-danger" title="Delete">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</main>

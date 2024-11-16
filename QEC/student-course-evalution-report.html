@@ -1,0 +1,89 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Expenses Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-4">Welcome To Quality Enhancement Cell</h3>
+      <hr class="my-4">
+
+      <div class="mb-3 text-end">
+        <p>18-Sep-2024 09:10 PM</p>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+
+          <h3 class="fw-bold fs-4 mb-4">Student Course Evaluation Report</h3>
+
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+
+              <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+
+                <!-- Select Degree -->
+                <div class="col-md-6 col-lg-6">
+                  <label for="select-degree" class="form-label">Select Your Degree</label>
+                  <select class="form-select" id="select-degree" name="degree">
+                    <option selected disabled>Please Select Degree</option>
+                    <option value="degree1">Degree 1</option>
+                    <option value="degree2">Degree 2</option>
+                    <option value="degree3">Degree 3</option>
+                    <!-- Add more degrees as needed -->
+                  </select>
+                </div>
+
+                <!-- Select Session -->
+                <div class="col-md-6 col-lg-6">
+                  <label for="select-session" class="form-label">Session</label>
+                  <select class="form-select" id="select-session" name="session">
+                    <option selected disabled>Please Select Session</option>
+                    <option value="session1">Session 1</option>
+                    <option value="session2">Session 2</option>
+                    <option value="session3">Session 3</option>
+                    <!-- Add more sessions as needed -->
+                  </select>
+                </div>
+
+                <!-- Select Semester -->
+                <div class="col-md-6 col-lg-6">
+                  <label for="select-semester" class="form-label">Select Your Semester</label>
+                  <select class="form-select" id="select-semester" name="semester">
+                    <option selected disabled>Please Select Semester</option>
+                    <option value="semester1">Semester 1</option>
+                    <option value="semester2">Semester 2</option>
+                    <option value="semester3">Semester 3</option>
+                    <!-- Add more semesters as needed -->
+                  </select>
+                </div>
+
+                <!-- Select Report Year -->
+                <div class="col-md-6 col-lg-6">
+                  <label for="select-report-year" class="form-label">Select Report Year</label>
+                  <select class="form-select" id="select-report-year" name="reportYear">
+                    <option selected disabled>Please Select Report Year</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <!-- Add more years as needed -->
+                  </select>
+                </div>
+
+                <!-- Generate Student Feedback Report Button -->
+                <div class="col-12 col-lg-6 d-flex align-items-end">
+                  <button type="submit" class="btn btn-primary w-100">Generate Student Feedback Report</button>
+                </div>
+
+                <!-- Generate Student Data for QEC Button -->
+                <div class="col-12 col-lg-6 d-flex align-items-end">
+                  <button type="submit" class="btn btn-primary w-100">Generate Student Data for QEC</button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

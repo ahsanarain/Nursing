@@ -1,0 +1,79 @@
+<main class="content py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Finance/fees.html', 'content');" class="btn btn-primary" >
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <h3 class="card-title fw-bold fs-4 mb-3">Fees Summary</h3>
+    <hr class="my-4">
+
+    <!-- Fees Section -->
+    <div class="card shadow-sm mb-4  profile-card">
+      <div class="card-body">
+
+
+        <div class="row align-items-center bg-light p-3 rounded">
+          <!-- Image Section -->
+          <div class="col-md-2 col-sm-4 text-center mb-3 mb-md-0">
+            <img src="images/NoGender.png" alt="Student Photo" class="img-fluid rounded-circle border border-primary border-3 student-photo" style="max-width: 120px;">
+          </div>
+
+          <!-- Information Section -->
+          <div class="col-md-10 col-sm-8">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="mb-2"><strong>ID:</strong> <span>12345</span></p>
+                <p class="mb-2"><strong>Candidate Name:</strong> <span>Amir Khan</span></p>
+                <p class="mb-2"><strong>Father's Name:</strong> <span>John Doe</span></p>
+                <p class="mb-2"><strong>Contact #:</strong> <span>123-456-7890</span></p>
+              </div>
+              <div class="col-md-6">
+                <p class="mb-2"><strong>Course:</strong> <span>Computer Science</span></p>
+                <p class="mb-2"><strong>Session:</strong> <span>2021-2022</span></p>
+                <p class="mb-2"><strong>Package:</strong> <span>Full Package</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <!-- DataTable -->
+      <div class="table-responsive">
+        <table id="myTable" class="table table-hover table-bordered table-striped text-center" style="width: 100%">
+          <thead class="table-primary">
+          <tr>
+            <th>Receipt No</th>
+            <th>E-Voucher</th>
+            <th>Online</th>
+            <th>Fees</th>
+            <th>Pay Date</th>
+            <th>Entry Date</th>
+            <th>Fees Type</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>2103</td>
+            <td>2103</td>
+            <td>00</td>
+            <td>66000</td>
+            <td>01-01-2021</td>
+            <td>01-01-2021</td>
+            <td>Tuition Fee</td>
+          </tr>
+          </tbody>
+        </table>
+        <hr class="my-2">
+        <h5 class="text-end">Amount Paid up to Rs. <span>642000</span>/=</h5>
+      </div>
+    </div>
+  </div>
+</main>

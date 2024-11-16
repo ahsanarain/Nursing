@@ -1,0 +1,86 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+
+    <div class="mb-4">
+      <a href="#" onclick="Route('Finance/income.html', 'content');" class="btn btn-primary" >
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+    <!-- Expenses Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Show Income</h3>
+      <hr class="my-4">
+
+
+
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Student Name</th>
+                <th>Father Name</th>
+                <th>Course</th>
+                <th>Session</th>
+                <th>Payment Mode</th>
+                <th>Amount</th>
+                <th>Bill Date</th>
+                <th>Description</th>
+                <th>Added on</th>
+                <th>Description</th>
+                <th>Bill#</th>
+                <th>Faculty</th>
+                <th>Print</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>S.No.</td>
+                <td>Student Name</td>
+                <td>Fatder Name</td>
+                <td>Course</td>
+                <td>Session</td>
+                <td>Payment Mode</td>
+                <td>Amount</td>
+                <td>Bill Date</td>
+                <td>Description</td>
+                <td>Added on</td>
+                <td>Description</td>
+                <td>Bill#</td>
+                <td>Faculty</td>
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+
+                    <button class="btn btn-sm btn-outline-primary" title="Edit">
+                      <!-- <i class="bi bi-pencil"></i> -->Generate Voucher
+                    </button>
+
+                  </div>
+                </td>
+
+
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+
+                    <a href="#" onclick="Route('Finance/edit-income.html', 'content');" class="btn btn-sm btn-outline-primary" title="Edit">
+                      <i class="bi bi-pencil"></i>
+                    </a>
+
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</main>

@@ -1,0 +1,48 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Fees Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Academic Session</h3>
+      <hr class="my-4">
+
+      <!-- Add Student Button -->
+      <div class="row mb-4">
+        <div class="col-12 text-end">
+          <a href="#" onclick="Route('Finance/add-student-fees.html', 'content');" class="btn btn-sm btn-primary">
+            Add Academic Session
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center" style="width: 100%">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Academic Session</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>GBSN-2021-24</td>
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+                    <button class="btn btn-sm btn-outline-danger" title="Delete">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

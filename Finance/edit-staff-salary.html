@@ -1,0 +1,72 @@
+<main class="content py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Finance/staff-salary.html', 'content');" class="btn btn-primary" >
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <h3 class="card-title fw-bold fs-4 mb-3">Update Staff Salary</h3>
+    <hr class="my-4">
+
+
+    <div class="card shadow-sm question-card">
+      <div class="card-body">
+        <!-- Add Fees Form -->
+        <form id="addFeesForm" action="" onsubmit="return AddForm();" method="post">
+          <div class="row g-3">
+
+            <!-- Staff Name -->
+            <div class="col-md-6">
+              <label for="staff_name" class="form-label"><strong>Staff Name</strong></label>
+              <select class="form-select" id="staff_name" name="staff_name" required>
+                <option value="" selected disabled>Select Staff</option>
+                <!-- Add dynamic options here -->
+              </select>
+            </div>
+
+            <!-- Month -->
+            <div class="col-md-6">
+              <label for="month" class="form-label"><strong>Month</strong></label>
+              <select class="form-select" id="month" name="month" required>
+                <option value="" selected disabled>Select Month</option>
+                <!-- Add dynamic options here -->
+              </select>
+            </div>
+
+            <!-- Dispatch Date -->
+            <div class="col-md-6">
+              <label for="dispatch_date" class="form-label"><strong>Dispatch Date</strong></label>
+              <input type="date" class="form-control" id="dispatch_date" name="dispatch_date" required>
+            </div>
+
+            <!-- Description -->
+            <div class="col-md-6">
+              <label for="description" class="form-label"><strong>Description</strong></label>
+              <textarea class="form-control" id="description" name="description" placeholder="Enter description" rows="1" required></textarea>
+            </div>
+
+            <!-- Amount -->
+            <div class="col-md-6">
+              <label for="amount" class="form-label"><strong>Amount</strong></label>
+              <input type="text" class="form-control" id="amount" name="amount" placeholder="Enter cost" required>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="col-12 d-flex justify-content-end gap-2 mt-3">
+              <button type="submit" class="btn btn-primary" id="addBillBtn">Update Record</button>
+              <button type="button" class="btn btn-secondary" id="closeBtn">Close</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</main>

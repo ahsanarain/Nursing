@@ -1,0 +1,61 @@
+<main class="content py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Finance/expenses.html', 'content');" class="btn btn-primary" >
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <h3 class="card-title fw-bold fs-4 mb-3">Add Expenses</h3>
+    <hr class="my-4">
+
+
+    <div class="card shadow-sm question-card">
+      <div class="card-body">
+
+        <!-- Add Fees Form -->
+        <form id="addFeesForm" action="" onsubmit="return AddForm();" method="post">
+          <div class="row g-3">
+
+            <!-- Pay Date -->
+            <div class="col-md-6">
+              <label for="date" class="form-label"><strong>Date</strong></label>
+              <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+
+            <!-- Bill No -->
+            <div class="col-md-6">
+              <label for="bill_no" class="form-label"><strong>Bill No</strong></label>
+              <input type="text" class="form-control" id="bill_no" name="bill_no" placeholder="E.g. 2023-09-22" required>
+            </div>
+
+            <!-- Description -->
+            <div class="col-md-6">
+              <label for="description" class="form-label"><strong>Description</strong></label>
+              <textarea class="form-control" id="description" name="description" placeholder="Enter description" rows="1" required></textarea>
+            </div>
+
+            <!-- Cost -->
+            <div class="col-md-6">
+              <label for="cost" class="form-label"><strong>Cost</strong></label>
+              <input type="text" class="form-control" id="cost" name="cost" placeholder="Enter cost" required>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="col-12 d-flex justify-content-end gap-2 mt-3">
+              <button type="submit" class="btn btn-primary" id="addBillBtn">Add Bill</button>
+              <button type="button" class="btn btn-secondary" id="closeBtn">Close</button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+
+
+  </div>
+</main>

@@ -1,0 +1,65 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Expenses Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Income</h3>
+      <hr class="my-4">
+
+      <!-- Add Expenses and Print Report Buttons -->
+      <div class="row mb-4">
+        <div class="col-12 text-end">
+          <a href="#" onclick="Route('Finance/add-income.html', 'content');" class="btn btn-sm btn-primary me-2" title="Add Expenses">
+            Add Icome
+          </a>
+          <a href="#" onclick="Route('Finance/show-income.html', 'content');" class="btn btn-sm btn-primary" title="Print Report">
+            Show Income   </a>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Student Name</th>
+                <th>Father Name</th>
+                <th>Course</th>
+                <th>Session</th>
+                <th>Photo</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>S.No.</td>
+                <td>Student Name</td>
+                <td>Fatder Name</td>
+                <td>Course</td>
+                <td>Session</td>
+                <td><img src="images/NoGender.png" alt="Student Photo" class="img-thumbnail border-0 bg-transparent" style="width: 50px;"></td>
+
+
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+
+                    <a href="#" onclick="Route('Finance/income-portal.html', 'content');" class="btn btn-sm btn-outline-primary" title="Edit">
+                      <i class="bi bi-pencil"></i>
+                    </a>
+
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</main>

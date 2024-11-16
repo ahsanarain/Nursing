@@ -1,0 +1,100 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Fees Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Inquiries Manager</h3>
+
+      <hr class="my-4">
+      <!-- Add Student Button -->
+      <div class="row mb-4">
+        <div class="col-12 text-end">
+          <a href="#" onclick="Route('Users/registration-form.html', 'content');" class="btn btn-sm btn-primary" >
+            Add Inquiries
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+
+
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+
+              <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+
+
+                <!-- To Date / Session Select -->
+                <div class="col-md-6 col-lg-6">
+                  <label for="course" class="form-label">All Purposes</label>
+                  <select class="form-select" id="course" name="course">
+                    <option selected disabled>Please Purpose</option>
+                    <option value="session1">Course 1</option>
+                    <option value="session2">Course 2</option>
+                    <option value="session3">Course 3</option>
+                    <!-- Add more sessions as needed -->
+                  </select>
+                </div>
+
+
+                <div class="col-12 col-lg-6 d-flex align-items-end">
+                  <button type="submit" class="btn btn-primary w-100">Apply Filter</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center" style="width: 100%">
+              <thead class="table-primary">
+              <tr>
+                <th>ID</th>
+                <th>Visitor's Name</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Purpose</th>
+                <th>Source</th>
+                <th>Document</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>ID</td>
+                <td>Visitor's Name</td>
+                <td>Phone</td>
+                <td>Date</td>
+                <td>Purpose</td>
+                <td>Source</td>
+                <td>Document</td>
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+                    <a href="#" onclick="Route('Users/view-student-record.html', 'content');" class="btn btn-sm btn-outline-success" title="View">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" onclick="Route('Users/edit-student-record.html', 'content');" class="btn btn-sm btn-outline-primary" title="Edit">
+                      <i class="bi bi-pencil"></i>
+                    </a>
+                    <a class="btn btn-sm btn-outline-danger" title="Delete">
+                      <i class="bi bi-trash"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

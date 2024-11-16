@@ -1,0 +1,101 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Expenses Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-4">Welcome To Quality Enhancement Cell</h3>
+      <hr class="my-4">
+
+      <div class="mb-3 text-end">
+        <p>18-Sep-2024 09:10 PM</p>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+
+          <h3 class="fw-bold fs-4 mb-4">Teacher Evaluation Report</h3>
+
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+
+              <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+
+                <!-- Select Degree -->
+                <div class="col-md-6 col-lg-6">
+                  <label for="select-degree" class="form-label">Degree</label>
+                  <select class="form-select" id="select-degree" name="degree">
+                    <option selected disabled>Please Select Degree</option>
+                    <option value="degree1">Degree 1</option>
+                    <option value="degree2">Degree 2</option>
+                    <option value="degree3">Degree 3</option>
+                    <!-- Add more degrees as needed -->
+                  </select>
+                </div>
+
+                <!-- Select Semester -->
+                <div class="col-md-6 col-lg-6">
+                  <label for="select-semester" class="form-label">Semester</label>
+                  <select class="form-select" id="select-semester" name="semester">
+                    <option selected disabled>Please Select Semester</option>
+                    <option value="semester1">Semester 1</option>
+                    <option value="semester2">Semester 2</option>
+                    <option value="semester3">Semester 3</option>
+                    <!-- Add more semesters as needed -->
+                  </select>
+                </div>
+
+                <!-- Select Subject -->
+                <div class="col-md-6 col-lg-6">
+                  <label for="select-subject" class="form-label">Subject</label>
+                  <select class="form-select" id="select-subject" name="subject">
+                    <option selected disabled>Please Select Subject</option>
+                    <option value="subject1">Subject 1</option>
+                    <option value="subject2">Subject 2</option>
+                    <option value="subject3">Subject 3</option>
+                    <!-- Add more subjects as needed -->
+                  </select>
+                </div>
+
+                <!-- Select Faculty -->
+                <div class="col-md-6 col-lg-6">
+                  <label for="select-faculty" class="form-label">Faculty</label>
+                  <select class="form-select" id="select-faculty" name="faculty">
+                    <option selected disabled>Please Select Faculty</option>
+                    <option value="faculty1">Faculty 1</option>
+                    <option value="faculty2">Faculty 2</option>
+                    <option value="faculty3">Faculty 3</option>
+                    <!-- Add more faculties as needed -->
+                  </select>
+                </div>
+
+                <!-- Select Report Year -->
+                <div class="col-md-6 col-lg-6">
+                  <label for="select-report-year" class="form-label"> Report Year</label>
+                  <select class="form-select" id="select-report-year" name="reportYear">
+                    <option selected disabled>Please Select Report Year</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <!-- Add more years as needed -->
+                  </select>
+                </div>
+                <br>
+                <!-- Generate Teacher Report Button -->
+                <div class="col-12 col-lg-6 d-flex align-items-end">
+                  <button type="submit" class="btn btn-primary w-100">Generate Teacher Report</button>
+                </div>
+
+                <!-- Generate Student Data for QEC Button -->
+                <div class="col-12 col-lg-6 d-flex align-items-end">
+                  <button type="submit" class="btn btn-primary w-100">Generate Student Data for QEC</button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

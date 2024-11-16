@@ -1008,7 +1008,7 @@
 		},
 		length: {
 			container: 'dt-length',
-			select: 'dt-input'
+			select: 'form-control'
 		},
 		order: {
 			canAsc: 'dt-orderable-asc',
@@ -1035,7 +1035,7 @@
 		},
 		search: {
 			container: 'dt-search',
-			input: 'dt-input'
+			input: 'form-control'
 		},
 		table: 'dataTable',	
 		tbody: {
@@ -12796,7 +12796,7 @@
 					var orderClasses = classes.order;
 					var columns = ctx.api.columns( cell );
 					var col = settings.aoColumns[columns.flatten()[0]];
-					var orderable = columns.orderable().includes(true);
+					var orderable = false;
 					var ariaType = '';
 					var indexes = columns.indexes();
 					var sortDirs = columns.orderable(true).flatten();
@@ -13080,7 +13080,6 @@
 			.append(str.replace(/_INPUT_/, input));
 	
 		// add for and id to label and input
-		filter.find('label').attr('for', 'dt-search-' + __searchCounter);
 		filter.find('input').attr('id', 'dt-search-' + __searchCounter);
 		__searchCounter++;
 	

@@ -1,0 +1,104 @@
+<main class="content py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Finance/fees.html', 'content');" class="btn btn-primary" >
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <h3 class="card-title fw-bold fs-4 mb-3">Update Fees Portal</h3>
+    <hr class="my-4">
+
+    <!-- Fees Section -->
+    <div class="card shadow-sm mb-4 profile-card">
+      <div class="card-body">
+
+
+        <div class="row align-items-center bg-light p-3 rounded">
+          <!-- Image Section -->
+          <div class="col-md-2 col-sm-4 text-center mb-3 mb-md-0">
+            <img src="images/NoGender.png" alt="Student Photo" class="img-fluid rounded-circle border border-primary border-3 student-photo" style="max-width: 120px;">
+          </div>
+
+          <!-- Information Section -->
+          <div class="col-md-10 col-sm-8">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="mb-2"><strong>ID:</strong> <span>12345</span></p>
+                <p class="mb-2"><strong>Candidate Name:</strong> <span>Amir Khan</span></p>
+                <p class="mb-2"><strong>Father's Name:</strong> <span>John Doe</span></p>
+                <p class="mb-2"><strong>Contact #:</strong> <span>123-456-7890</span></p>
+              </div>
+              <div class="col-md-6">
+                <p class="mb-2"><strong>Course:</strong> <span>Computer Science</span></p>
+                <p class="mb-2"><strong>Session:</strong> <span>2021-2022</span></p>
+                <p class="mb-2"><strong>Package:</strong> <span>Full Package</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Student Registration Section -->
+    <div class="card shadow-sm mb-4 registration-card">
+      <div class="card-body">
+
+        <form id="updateForm" action="" onsubmit="return AddForm();" method="post">
+          <div class="row g-3">
+            <!-- Amount Paid -->
+            <div class="col-md-4">
+              <label for="receipt_no" class="form-label"><strong>Amount Paid</strong></label>
+              <input type="text" class="form-control" id="receipt_no" name="receipt_no" value="2103">
+            </div>
+
+            <!-- Pay Date -->
+            <div class="col-md-4">
+              <label for="pay_date" class="form-label"><strong>Pay Date</strong></label>
+              <input type="date" class="form-control" id="pay_date" name="pay_date" value="2021-01-01">
+            </div>
+
+            <!-- Fees Type -->
+            <div class="col-md-4">
+              <label for="fees" class="form-label"><strong>Fees Type</strong></label>
+              <input type="number" class="form-control" id="fees" name="fees" value="66000">
+            </div>
+
+            <!-- Cash Receipt -->
+            <div class="col-md-4">
+              <label for="cash_receipt" class="form-label"><strong>Cash Receipt</strong></label>
+              <input type="number" class="form-control" id="cash_receipt" name="cash_receipt" value="66000">
+            </div>
+
+            <!-- E-Voucher -->
+            <div class="col-md-4">
+              <label for="e_voucher" class="form-label"><strong>Electronic Voucher</strong></label>
+              <input type="text" class="form-control" id="e_voucher" name="e_voucher" value="2103">
+            </div>
+
+            <!-- Online Cash -->
+            <div class="col-md-4">
+              <label for="online" class="form-label"><strong>Online Cash</strong></label>
+              <input type="text" class="form-control" id="online" name="online" value="00">
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="d-flex justify-content-end gap-2 mt-3">
+            <button type="button" class="btn btn-success" id="updateBtn">Update</button>
+            <button type="submit" class="btn btn-primary" id="saveBtn">Cancel</button>
+            <button type="button" class="btn btn-danger" id="deleteBtn">Delete</button>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+
+  </div>
+</main>

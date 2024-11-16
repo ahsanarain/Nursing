@@ -1,0 +1,60 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Expenses Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-3">Courses</h3>
+      <hr class="my-4">
+
+      <!-- Add Expenses and Print Report Buttons -->
+      <div class="row mb-4">
+        <div class="col-12 text-end">
+          <a href="#" onclick="Route('Courses/add-course.html', 'content');" class="btn btn-sm btn-primary me-2" title="Add Expenses">
+            Add Course
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Category</th>
+                <th>Course</th>
+                <th>Introduction</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>1</th>
+                <th>sindh_nursing</th>
+                <th>PB EDM Nursing</th>
+                <th>Diploma Program;Yearly Examination System;Monthly fees Schedule in advance</th>
+                <td>
+                  <div class="d-flex justify-content-center gap-2">
+
+                    <button class="btn btn-sm btn-outline-primary" title="Edit">
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-danger" title="Delete">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</main>

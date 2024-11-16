@@ -1,0 +1,50 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Reports/character-certificate.html', 'content');" class="btn btn-primary">
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <!-- Expenses Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-4">Character Certificate</h3>
+
+      <hr class="my-4">
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+              <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+                <!-- Gazette No -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="gazette-no" class="form-label">Gazette No</label>
+                  <input type="text" class="form-control" id="gazette-no" name="gazette-no">
+                </div>
+
+                <!-- Result Declaration Date -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="result-date" class="form-label">Result Declaration Date</label>
+                  <input type="date" class="form-control" id="result-date" name="result-date">
+                </div>
+
+                <!-- Roll No -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="roll-no" class="form-label">Roll No</label>
+                  <input type="text" class="form-control" id="roll-no" name="roll-no">
+                </div>
+
+                <!-- Generate Button -->
+                <div class="col-12 col-lg-4 d-flex align-items-end">
+                  <button type="submit" class="btn btn-primary w-100">Generate Report</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

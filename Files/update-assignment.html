@@ -1,0 +1,82 @@
+<main class="content px-3 py-4">
+  <div class="container" id="dynamic-content">
+
+    <!-- Back Button -->
+    <div class="mb-4">
+      <a href="#" onclick="Route('Files/upload-assignment.html', 'content');" class="btn btn-primary">
+        <i class="bi bi-arrow-left"></i>
+      </a>
+    </div>
+
+    <!-- Library Management System Section -->
+    <div class="mb-3">
+      <h3 class="fw-bold fs-4 mb-4">Update Assignment</h3>
+      <hr class="my-4">
+
+      <!-- Form Section -->
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+
+          <div class="card shadow-sm mb-4 registration-card">
+            <div class="card-body">
+
+              <form class="row g-3"  action="" onsubmit="return AddForm();" method="post" enctype="multipart/form-data">
+
+                <!-- Teacher Name Input -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="teacherName" class="form-label">Teacher Name</label>
+                  <input type="text" id="teacherName" name="teacherName" class="form-control">
+                </div>
+
+                <!-- Teacher ID Input -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="teacherID" class="form-label">Teacher ID</label>
+                  <input type="text" id="teacherID" name="teacherID" class="form-control">
+                </div>
+
+                <!-- Program Input -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="program" class="form-label">Program</label>
+                  <input type="text" id="program" name="program" class="form-control">
+                </div>
+
+                <!-- Academic Session Input -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="academicSession" class="form-label">Academic Session</label>
+                  <input type="text" id="academicSession" name="academicSession" class="form-control">
+                </div>
+
+                <!-- File Upload -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="fileUpload" class="form-label">Upload PDF File</label>
+                  <input class="form-control" type="file" id="fileUpload" name="fileUpload">
+                </div>
+
+                <!-- View Assignment Link -->
+                <div class="col-md-6 col-lg-4 d-flex align-items-center justify-content-center">
+                  <a href="" target="_blank" class="btn btn-link w-100 text-decoration-none">View Assignment</a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="col-md-6 col-lg-4 d-flex flex-column gap-2">
+                  <button type="submit" class="btn btn-primary w-100">Upload</button>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex flex-column gap-2">
+                  <button type="button" class="btn btn-secondary w-100">Cancel</button>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex flex-column gap-2">
+                  <button type="button" class="btn btn-danger w-100">Delete</button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
