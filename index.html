@@ -5,17 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Al-Jadoon College of Nursing and Health Sciences</title>
-    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+    <script src="assets/fontawesome/js/all.min.js"></script>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="shortcut icon" href="./images/logo.jpeg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/logo_circle.png" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/dataTables.dataTables.css"/>
     <link href="assets/css/main.min.css" rel="stylesheet"/>
     <script src="assets/js/iziToast.min.js"></script>
     <link rel="stylesheet" href="assets/css/iziToast.css"/>
     <link rel="stylesheet" href="assets/css/iziToast.min.css"/>
+    <script src="assets/js/jquery-3.7.1.js"></script>
     <script src="assets/js/chart.js"></script>
+    <script>
+      function Route(sPath, sDiv)
+      {
+        fetch(''+sPath+'')
+                .then(response => response.text())
+                .then(html => {
+                  document.getElementById(''+sDiv+'').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        return false;
+      }
+      Route('Dashboard/Dashboard.html', 'content');
+    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dataTables.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/forms.js"></script>
+    <script src="assets/js/main.min.js"></script>
     <style>
       @media (max-width: 768px) {
         .fc-toolbar {
@@ -44,7 +63,6 @@
       }
     </style>
   </head>
-
   <body>
     <div class="wrapper">
       <aside id="sidebar" class="expand">
@@ -62,6 +80,12 @@
         </div>
         <ul class="sidebar-nav" style="padding: 0;text-align: left">
           <li class="sidebar-item">
+            <a href="#" onclick="Route('Dashboard/Dashboard.html', 'content');" class="sidebar-link">
+              <i class="fa fa-solid fa-house"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
             <a
               href="#"
               class="sidebar-link collapsed has-dropdown"
@@ -69,8 +93,9 @@
               data-bs-target="#finance"
               aria-expanded="false"
               aria-controls="finance"
+              onclick="Route('Finance/fees.html', 'content');"
             >
-              <i class="bi bi-currency-dollar"></i>
+              <i class="fa-solid fa-coins"></i>
               <span>Finance</span>
             </a>
             <ul
@@ -110,8 +135,9 @@
               data-bs-target="#user-account"
               aria-expanded="false"
               aria-controls="user-account"
+              onclick="Route('Users/student-record.html', 'content');"
             >
-              <i class="bi bi-people"></i>
+              <i class="fa-solid fa-graduation-cap"></i>
               <span>Users</span>
             </a>
             <ul
@@ -155,8 +181,9 @@
               data-bs-target="#attendence"
               aria-expanded="false"
               aria-controls="attendence"
+              onclick="Route('Attendance/gpr-attendence.html', 'content');"
             >
-              <i class="bi bi-calendar-check"></i>
+              <i class="fa-solid fa-clipboard-user"></i>
               <span>Attendance</span>
             </a>
             <ul
@@ -191,8 +218,9 @@
               data-bs-target="#add-view-course"
               aria-expanded="false"
               aria-controls="add-view-course"
+              onclick="Route('Courses/course.html', 'content');"
             >
-              <i class="bi bi-folder-plus"></i>
+              <i class="fa-solid fa-book-open-reader"></i>
               <span>Courses</span>
             </a>
             <ul
@@ -219,8 +247,9 @@
               data-bs-target="#sms"
               aria-expanded="false"
               aria-controls="sms"
+              onclick="Route('SMS/send-individual.html', 'content');"
             >
-              <i class="bi bi-chat-left-text"></i>
+              <i class="fa-solid fa-message"></i>
               <span>SMS</span>
             </a>
             <ul
@@ -254,8 +283,9 @@
               data-bs-target="#qec"
               aria-expanded="false"
               aria-controls="qec"
+              onclick="Route('QEC/student-course-evalution.html', 'content');"
             >
-              <i class="bi bi-shield-check"></i>
+              <i class="fa-solid fa-shield-halved"></i>
               <span>QEC</span>
             </a>
             <ul
@@ -301,8 +331,9 @@
               data-bs-target="#reception"
               aria-expanded="false"
               aria-controls="reception"
+              onclick="Route('Reception/letter-manager.html', 'content');"
             >
-              <i class="bi bi-person-lines-fill"></i>
+              <i class="fa-solid fa-user-tie"></i>
               <span>Reception</span>
             </a>
             <ul
@@ -331,8 +362,9 @@
               data-bs-target="#question-bank"
               aria-expanded="false"
               aria-controls="question-bank"
+              onclick="Route('QuestionBank/add-mcqs-question.html', 'content');"
             >
-              <i class="bi bi-question-diamond"></i>
+              <i class="fa-solid fa-clipboard-question"></i>
               <span>Question Bank</span>
             </a>
             <ul
@@ -380,8 +412,9 @@
               data-bs-target="#lms"
               aria-expanded="false"
               aria-controls="lms"
+              onclick="Route('LMS/learning-lms.html', 'content');"
             >
-              <i class="bi bi-book"></i>
+              <i class="fa-solid fa-book-atlas"></i>
               <span>LMS</span>
             </a>
             <ul
@@ -408,8 +441,9 @@
               data-bs-target="#upload-download"
               aria-expanded="false"
               aria-controls="upload-download"
+              onclick="Route('Files/upload-assignment.html', 'content');"
             >
-              <i class="bi bi-arrow-down-up"></i>
+              <i class="fa-solid fa-cloud-arrow-up"></i>
               <span>Upload Files</span>
             </a>
             <ul
@@ -438,8 +472,9 @@
               data-bs-target="#emi"
               aria-expanded="false"
               aria-controls="emi"
+              onclick="Route('EMI/remove.html', 'content');"
             >
-              <i class="bi bi-credit-card"></i>
+              <i class="fa-solid fa-credit-card"></i>
               <span>EMI</span>
             </a>
             <ul
@@ -455,14 +490,14 @@
 
           <li class="sidebar-item">
             <a href="#" onclick="Route('Reports/report.html', 'content');" class="sidebar-link">
-              <i class="bi bi-file-earmark-text"></i>
+              <i class="fa-solid fa-chart-pie"></i>
               <span>Report</span>
             </a>
           </li>
 
           <li class="sidebar-item">
             <a href="login.html" class="sidebar-link">
-              <i class="bi bi-box-arrow-left"></i>
+              <i class="fa-solid fa-right-from-bracket"></i>
               <span>Logout</span>
             </a>
           </li>
@@ -482,16 +517,16 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end rounded">
                   <a href="#" class="dropdown-item">
-                    <i class="bi bi-person"></i>
+                    <i class="fa-solid fa-user"></i>
                     Profile
                   </a>
                   <a href="#" class="dropdown-item">
-                    <i class="bi bi-gear"></i>
+                    <i class="fa-solid fa-gear"></i>
                     Setting
                   </a>
                   <div class="dropdown-divider"></div>
                   <a href="login.html" class="dropdown-item">
-                    <i class="bi bi-box-arrow-left"></i>
+                    <i class="fa-solid fa-right-from-bracket"></i>
                     Logout
                   </a>
                 </div>
@@ -499,139 +534,8 @@
             </ul>
           </div>
         </nav>
-
         <main class="content px-3 py-4" id="content">
-          <div class="container" id="dynamic-content">
-            <!-- Dashboard Title -->
-            <h3 class="fw-bold fs-4 mb-3 bold-font"><i class="bi bi-house" style="font-size: 30px;"></i> My Dashboard </h3>
-
-            <!-- Dashboard Stats -->
-            <div class="row">
-              <div class="col-12 col-md-3 mb-4">
-                <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
-                  <span style="font-size: 25px;" class="WebHR_Title2">532</span>
-                  <span style="float: right; padding: 5px;">
-                    <i class="bi bi-person" style="font-size: 40px;"></i></span>
-                  <span style="float:right;"></span>
-                  <br>
-                  <span style="font-size: 16px;">Present Students</span>
-                  <div class="progress" style="width: 100%;">
-                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-3 mb-4">
-                <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
-                  <span style="font-size: 25px;" class="WebHR_Title2">50</span>
-                  <span style="float: right; padding: 5px;">
-                    <i class="bi bi-calendar-check" style="font-size: 40px;"></i></span>
-                  <span style="float:right;"></span>
-                  <br>
-                  <span style="font-size: 16px;">Today Leave</span>
-                  <div class="progress" style="width: 100%;">
-                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-3 mb-4">
-                <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
-                  <span style="font-size: 25px;" class="WebHR_Title2">100</span>
-                  <span style="float: right; padding: 5px;">
-                    <i class="bi bi-ui-checks" style="font-size: 40px;"></i></span>
-                  <span style="float:right;"></span>
-                  <br>
-                  <span style="font-size: 16px;">Online Applications</span>
-                  <div class="progress" style="width: 100%;">
-                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-3 mb-4">
-                <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
-                  <span style="font-size: 25px;" class="WebHR_Title2">450</span>
-                  <span style="float: right; padding: 5px;">
-                    <i class="bi bi-person-check" style="font-size: 40px;"></i></span>
-                  <span style="float:right;"></span>
-                  <br>
-                  <span style="font-size: 16px;">Active Students</span>
-                  <div class="progress" style="width: 100%;">
-                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Table Section -->
-            <div class="row">
-              <div class="col-12">
-                <div class="table-responsive shadow-sm">
-                  <table
-                    id="myTable"
-                    class="table table-hover table-bordered table-striped text-center"
-                    style="width: 100%"
-                  >
-                    <thead class="table-primary">
-                      <tr>
-                        <th>Name</th>
-                        <th>Father Name</th>
-                        <th>Course</th>
-                        <th>Contact</th>
-                        <th>Applied on</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Kamran</td>
-                        <td>K Khan</td>
-                        <td>Generic BSN (4 Year)</td>
-                        <td>03322222222</td>
-                        <td>01-07-2024</td>
-                        <td>
-                          <button class="btn btn-sm btn-outline-success">
-                            Approved
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Kamran</td>
-                        <td>K Khan</td>
-                        <td>Generic BSN (4 Year)</td>
-                        <td>03322222222</td>
-                        <td>01-07-2024</td>
-                        <td>
-                          <button class="btn btn-sm btn-outline-warning">
-                            Pending
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <!-- Doughnut Chart and Calendar Section -->
-            <div class="container py-5">
-              <div class="row">
-                <div class="col-md-6">
-                  <!-- Doughnut Chart Section -->
-                  <h2 class="mb-4 bold-font">Chart</h2>
-                  <canvas id="doughnutChart"></canvas>
-                </div>
-                <div class="col-md-6">
-                  <!-- Calendar Section -->
-                  <h2 class="mb-4 bold-font">Calendar</h2>
-                  <div id="calendar"></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </main>
-
         <div class="footer">
           ©&nbsp;2024 -
           <a href="#" target="_blank">Terms &amp; Conditions</a>&nbsp;|&nbsp;
@@ -640,95 +544,5 @@
         </div>
       </div>
     </div>
-
-    <script
-      src="assets/js/bootstrap.bundle.min.js"
-    ></script>
-
-    <script
-      src="assets/js/jquery-3.7.1.js"
-    ></script>
-
-    <script src="assets/js/dataTables.js"></script>
-
-    <script src="assets/js/script.js"></script>
-
-    <!-- Chart.js Doughnut Chart Setup -->
-    <script>
-      const ctx = document.getElementById("doughnutChart").getContext("2d");
-      const doughnutChart = new Chart(ctx, {
-        type: "doughnut",
-        data: {
-          labels: ["Present", "Leave", "Applications", "Active"],
-          datasets: [
-            {
-              label: "Student Stats",
-              data: [522, 50, 100, 450],
-              backgroundColor: [
-                "rgba(75, 192, 192, 0.2)",
-                "rgba(255, 99, 132, 0.2)",
-                "rgba(54, 162, 235, 0.2)",
-                "rgba(153, 102, 255, 0.2)",
-              ],
-              borderColor: [
-                "rgba(75, 192, 192, 1)",
-                "rgba(255, 99, 132, 1)",
-                "rgba(54, 162, 235, 1)",
-                "rgba(153, 102, 255, 1)",
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              display: true,
-              position: "top",
-            },
-          },
-          cutout: "70%", // Creates doughnut effect
-        },
-      });
-    </script>
-
-    <!-- FullCalendar JS CDN -->
-    <script src="assets/js/main.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var calendarEl = document.getElementById("calendar");
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: "dayGridMonth",
-          headerToolbar: {
-            // left: "prev,next today",
-            // center: "title",
-            // right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
-          },
-          events: [
-            {
-              title: "Meeting",
-              start: "2024-09-30",
-            },
-            {
-              title: "Conference",
-              start: "2024-10-05",
-              end: "2024-10-07",
-            },
-            {
-              title: "Birthday Party",
-              start: "2024-10-09T19:00:00",
-            },
-          ],
-          // Ensure the calendar is responsive
-          windowResize: function (view) {
-            calendar.updateSize();
-          },
-        });
-
-        calendar.render();
-      });
-    </script>
   </body>
 </html>

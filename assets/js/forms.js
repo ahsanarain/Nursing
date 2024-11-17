@@ -1,13 +1,3 @@
-function Route(sPath, sDiv)
-{
-    fetch(''+sPath+'')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById(''+sDiv+'').innerHTML = html;
-        })
-        .catch(error => console.error('Error loading HTML:', error));
-    return false;
-}
 
 function AddAttendance()
 {
@@ -20,7 +10,7 @@ function AddAttendance()
     }
 
     // success
-    iziToast.success({timeout: 5000, color : '#ffe8e1', icon: 'bi bi-check-lg', position: "bottomLeft", title: 'Success', message: 'Attendance Added Successfully'});
+    iziToast.success({timeout: 5000, color : '#e9ecf0', icon: 'bi bi-check-lg', position: "bottomLeft", title: 'Success', message: 'Attendance Added Successfully'});
 
     Route("Attendance/add-attendence.html", "content");
     return false;
@@ -29,7 +19,7 @@ function AddAttendance()
 function AddForm()
 {
     // success
-    iziToast.success({timeout: 5000, color : '#ffe8e1', icon: 'bi bi-check-lg', position: "bottomLeft", title: 'Success', message: 'Record Added Successfully'});
+    iziToast.success({timeout: 5000, color : '#e9ecf0', icon: 'bi bi-check-lg', position: "bottomLeft", title: 'Success', message: 'Record Added Successfully'});
 
     return false;
 }

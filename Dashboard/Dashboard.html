@@ -1,0 +1,208 @@
+<div class="container" id="dynamic-content">
+    <!-- Dashboard Title -->
+    <h3 class="fw-bold fs-4 mb-3 bold-font"><i class="fa fa-solid fa-house"  style="font-size: 30px;"></i> My Dashboard </h3>
+
+    <!-- Dashboard Stats -->
+    <div class="row">
+        <div class="col-12 col-md-3 mb-4">
+            <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
+                <span style="font-size: 25px;" class="WebHR_Title2">532</span>
+                <span style="float: right; padding: 5px;">
+                    <i class="fa-solid fa-graduation-cap" style="font-size: 40px;"></i>
+                  </span>
+                <span style="float:right;"></span>
+                <br>
+                <span style="font-size: 16px;">Present Students</span>
+                <div class="progress" style="width: 100%;">
+                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3 mb-4">
+            <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
+                <span style="font-size: 25px;" class="WebHR_Title2">50</span>
+                <span style="float: right; padding: 5px;">
+                    <i class="fa-solid fa-calendar-check" style="font-size: 40px;"></i>
+                  </span>
+                <span style="float:right;"></span>
+                <br>
+                <span style="font-size: 16px;">Today Leave</span>
+                <div class="progress" style="width: 100%;">
+                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3 mb-4">
+            <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
+                <span style="font-size: 25px;" class="WebHR_Title2">100</span>
+                <span style="float: right; padding: 5px;">
+                    <i class="fa-solid fa-file-signature" style="font-size: 40px;"></i>
+                  </span>
+                <span style="float:right;"></span>
+                <br>
+                <span style="font-size: 16px;">Online Applications</span>
+                <div class="progress" style="width: 100%;">
+                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3 mb-4">
+            <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
+                <span style="font-size: 25px;" class="WebHR_Title2">450</span>
+                <span style="float: right; padding: 5px;">
+                    <i class="fa-solid fa-user-check" style="font-size: 40px;"></i>
+                  </span>
+                <span style="float:right;"></span>
+                <br>
+                <span style="font-size: 16px;">Active Students</span>
+                <div class="progress" style="width: 100%;">
+                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive shadow-sm">
+                <table
+                        id="myTable"
+                        class="table table-hover table-bordered table-striped text-center"
+                        style="width: 100%"
+                >
+                    <thead class="table-primary">
+                    <tr>
+                        <th>Name</th>
+                        <th>Father Name</th>
+                        <th>Course</th>
+                        <th>Contact</th>
+                        <th>Applied on</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Kamran</td>
+                        <td>K Khan</td>
+                        <td>Generic BSN (4 Year)</td>
+                        <td>03322222222</td>
+                        <td>01-07-2024</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-success">
+                                Approved
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kamran</td>
+                        <td>K Khan</td>
+                        <td>Generic BSN (4 Year)</td>
+                        <td>03322222222</td>
+                        <td>01-07-2024</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-warning">
+                                Pending
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doughnut Chart and Calendar Section -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Doughnut Chart Section -->
+                <h2 class="mb-4 bold-font">Chart</h2>
+                <canvas id="doughnutChart"></canvas>
+            </div>
+            <div class="col-md-6">
+                <!-- Calendar Section -->
+                <h2 class="mb-4 bold-font">Calendar</h2>
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Chart.js Doughnut Chart Setup -->
+<script>
+    const ctx = document.getElementById("doughnutChart").getContext("2d");
+    const doughnutChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+            labels: ["Present", "Leave", "Applications", "Active"],
+            datasets: [
+                {
+                    label: "Student Stats",
+                    data: [522, 50, 100, 450],
+                    backgroundColor: [
+                        "rgba(75, 192, 192, 0.2)",
+                        "rgba(255, 99, 132, 0.2)",
+                        "rgba(54, 162, 235, 0.2)",
+                        "rgba(153, 102, 255, 0.2)",
+                    ],
+                    borderColor: [
+                        "rgba(75, 192, 192, 1)",
+                        "rgba(255, 99, 132, 1)",
+                        "rgba(54, 162, 235, 1)",
+                        "rgba(153, 102, 255, 1)",
+                    ],
+                    borderWidth: 1,
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: "top",
+                },
+            },
+            cutout: "70%", // Creates doughnut effect
+        },
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: "dayGridMonth",
+            headerToolbar: {
+                // left: "prev,next today",
+                // center: "title",
+                // right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
+            },
+            events: [
+                {
+                    title: "Meeting",
+                    start: "2024-09-30",
+                },
+                {
+                    title: "Conference",
+                    start: "2024-10-05",
+                    end: "2024-10-07",
+                },
+                {
+                    title: "Birthday Party",
+                    start: "2024-10-09T19:00:00",
+                },
+            ],
+            // Ensure the calendar is responsive
+            windowResize: function (view) {
+                calendar.updateSize();
+            },
+        });
+
+        calendar.render();
+    });
+</script>

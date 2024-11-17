@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 :root {
-  --blue: #ff8c6b;
-  --dark-blue: #ce6445;
+  --blue: #215c84;
+  --dark-blue: #27426d;
   --white: #fff;
   --black: #000;
-  --light:#ffe8e1;
+  --light:#e9ecf0;
 }
 
 ::after,
@@ -56,7 +56,7 @@ div.dt-container .dt-paging .dt-paging-button{
 }
 
 .table-primary th{
-  background-color: var(--dark-blue);
+  background-color: var(--blue);
   color: var(--white);
   padding: 3px !important;
 }
@@ -105,7 +105,7 @@ div.dt-container .dt-paging .dt-paging-button{
   border-radius: 3px 3px 3px 3px;
   box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
   padding: 10px 10px 10px 10px;
-  border-top: #ce6445 2px solid;
+  border-top: var(--dark-blue) 2px solid;
 }
 
 .footer
@@ -145,7 +145,7 @@ div.dt-container .dt-paging .dt-paging-button{
   min-width: 60px;
   z-index: 1000;
   transition: all 0.25s ease-in-out;
-  background-color: #ff8c6b;
+  background-color: #215c84;
   display: flex;
   flex-direction: column;
 }
@@ -162,7 +162,7 @@ div.dt-container .dt-paging .dt-paging-button{
   padding: 10px;
 }
 
-.toggle-btn i {
+.toggle-btn i, .toggle-btn svg {
   font-size: 1.5rem;
   color: var(--white);
 }
@@ -233,15 +233,15 @@ a.sidebar-link {
   border-left: 3px solid transparent;
 }
 
-.sidebar-link i,
-.dropdown-item i {
+.sidebar-link i, .sidebar-link svg,
+.dropdown-item i, .dropdown-item svg {
   font-size: 1.1rem;
-  margin-right: 0.75rem;
+  margin-right: 0.75rem !important;
 }
 
 a.sidebar-link:hover {
   background-color: rgba(255, 255, 255, 0.075);
-  border-left: 3px solid #ce6445;
+  border-left: 3px solid var(--dark-blue);
 }
 
 .sidebar-item {
@@ -252,7 +252,7 @@ a.sidebar-link:hover {
   position: absolute;
   top: 0;
   left: 60px;
-  background: #ff8c6b !important;
+  background: #215c84 !important;
   padding: 0;
   min-width: 15rem;
   display: none;
@@ -285,11 +285,11 @@ a.sidebar-link:hover {
 .progress{
   height:0.5rem;
 }
-i{
+i, svg{
   color: var(--dark-blue);
 }
 
-.btn-primary i, .sidebar-link i
+.btn-primary i, .btn-primary svg, .sidebar-link i, .sidebar-link svg
 {
   color: var(--white);
 }
@@ -308,7 +308,7 @@ a{
   color: var(--white);
 }
 a:hover{
-  color: var(--dark-blue);
+  color: var(--blue);
 }
 .dropdown-item:hover{
   background-color: var(--light);
@@ -341,6 +341,9 @@ a:hover{
 {
   display: none !important;
 }
+.table-primary tr th{
+  border: 0 !important;
+}
 
 .card {
   background-color: var(--white);
@@ -352,8 +355,6 @@ a:hover{
 }
 .card:hover {
   color: var(--black);
-  background-color: #e1cfcf;
-  transform: translateY(-10.5px);
 }
 .question-card:hover,
 .registration-card:hover,
@@ -394,7 +395,7 @@ footer {
     background-color: var(--white);
   }
   .input-group-navbar .btn {
-    background-color: #ff8c6b;
+    background-color: #215c84;
     color: var(--white);
     cursor: pointer;
     z-index: 1000;
@@ -426,18 +427,22 @@ footer {
 
 /* Button styling */
 .btn-primary {
-  background-color: #ff8c6b; /* or #007bff if not using CSS variables */
+  background-color: var(--blue); /* or #007bff if not using CSS variables */
   border: none;
   color: #fff;
   transition: background-color 0.2s ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: #ce6445; /* or #0056b3 if not using CSS variables */
+  background-color: var(--dark-blue); /* or #0056b3 if not using CSS variables */
 }
 
 .btn-primary:active{
-  background-color: #ce6445 !important;
+  background-color: var(--dark-blue) !important;
+}
+
+button.btn-secondary svg, button.btn-success svg, button.btn-danger svg{
+  color: var(--white);
 }
 
 .btn-secondary {

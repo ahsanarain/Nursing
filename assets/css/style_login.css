@@ -17,7 +17,7 @@ main {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    background-color: #ff8c6b;
+    background-color: #215c84;
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -113,7 +113,7 @@ form.sign-up-form {
 }
 
 .toggle:hover {
-    color: #ec7f65;
+    color: #27426d;
 }
 
 .input-wrap {
@@ -148,7 +148,7 @@ label {
 }
 
 .input-field.active {
-    border-bottom-color: #ec7f65;
+    border-bottom-color: #27426d;
 }
 
 .input-field.active + label {
@@ -171,7 +171,7 @@ label {
 }
 
 .sign-btn:hover {
-    background-color: #ec7f65;
+    background-color: #27426d;
 }
 
 .text {
@@ -185,7 +185,7 @@ label {
 }
 
 .text a:hover {
-    color: #ec7f65;
+    color: #27426d;
 }
 
 main.sign-up-mode form.sign-in-form {
@@ -212,7 +212,7 @@ main.sign-up-mode .carousel {
     width: 55%;
     left: 45%;
     top: 0;
-    background-color: #ffe0d2;
+    background-color: #d4d9e2;
     border-radius: 2rem;
     display: grid;
     grid-template-rows: auto 1fr;
