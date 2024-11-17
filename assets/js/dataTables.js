@@ -13066,14 +13066,7 @@
 		var end = opts.text.match(/_INPUT_$/);
 		var start = opts.text.match(/^_INPUT_/);
 		var removed = opts.text.replace(/_INPUT_/, '');
-		var str = '<label>' + opts.text + '</label>';
-	
-		if (start) {
-			str = '_INPUT_<label>' + removed + '</label>';
-		}
-		else if (end) {
-			str = '<label>' + removed + '</label>_INPUT_';
-		}
+		var str = '_INPUT_';
 	
 		var filter = $('<div>')
 			.addClass(classes.container)
