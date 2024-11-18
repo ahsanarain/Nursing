@@ -2,14 +2,13 @@
   <div class="container" id="dynamic-content">
 
     <!-- Back Button -->
-    <div class="mb-4">
+    <div class="mb-4" style="text-align: right;">
       <a href="#" onclick="Route('Attendance/leave.html', 'content');" class="btn btn-primary">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
 
-    <h3 class="card-title fw-bold fs-4 mb-3">Apply Leave</h3>
-    <hr class="my-4">
+    <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Apply Leave</h3></div>
 
     <div class="card shadow-sm question-card">
       <div class="card-body">
@@ -19,21 +18,21 @@
           <div class="row g-3">
 
             <!-- Name -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="name" class="form-label"><strong>Name</strong></label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
+              <input type="text" class="input-field" id="name" name="name" placeholder="Enter name" required>
             </div>
 
             <!-- Leave From -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="leaveFrom" class="form-label"><strong>Leave From</strong></label>
-              <input type="date" class="form-control" id="leaveFrom" name="leaveFrom" required>
+              <input type="date" class="input-field" id="leaveFrom" name="leaveFrom" required>
             </div>
 
             <!-- Leave To -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="leaveTo" class="form-label"><strong>Leave To</strong></label>
-              <input type="date" class="form-control" id="leaveTo" name="leaveTo" required>
+              <input type="date" class="input-field" id="leaveTo" name="leaveTo" required>
             </div>
 
             <!-- Leave Type -->
@@ -50,13 +49,13 @@
             </div>
 
             <!-- Reason for Leave -->
-            <div class="col-md-12">
+            <div class="col-md-12 input-wrap">
               <label for="reason" class="form-label"><strong>Reason for Leave</strong></label>
-              <textarea class="form-control" id="reason" name="reason" rows="3" placeholder="Enter reason for leave" required></textarea>
+              <textarea class="input-field" id="reason" name="reason" rows="3" placeholder="Enter reason for leave" required></textarea>
             </div>
 
             <!-- Action Buttons -->
-            <div class="col-12 d-flex justify-content-end gap-2 mt-3">
+            <div class="col-12 d-flex justify-content-end gap-2 mt-3" style="justify-content:center !important;">
               <button type="submit" class="btn btn-primary" id="applyBtn">Apply</button>
               <button type="button" class="btn btn-secondary" id="closeBtn">Close</button>
             </div>

@@ -2,14 +2,13 @@
   <div class="container" id="dynamic-content">
 
     <!-- Back Button -->
-    <div class="mb-4">
+    <div class="mb-4" style="text-align: right;">
       <a href="#" onclick="Route('Users/create-faculty-account.html', 'content');" class="btn btn-primary">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
 
-    <h3 class="card-title mb-4">Account</h3>
-    <hr class="my-4">
+    <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Account</h3></div>
 
     <!-- Lecture Registration Section -->
     <div class="card shadow-sm mb-4 registration-card">
@@ -18,51 +17,51 @@
         <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
 
           <!-- Teacher Name -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="teacher-name" class="form-label">Teacher Name</label>
-            <input type="text" class="form-control" id="teacher-name" name="teacher-name" required>
+            <input type="text" class="input-field" id="teacher-name" name="teacher-name" required>
           </div>
 
           <!-- Teacher CNIC -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="teacher-cnic" class="form-label">Teacher CNIC</label>
-            <input type="text" class="form-control" id="teacher-cnic" name="teacher-cnic" required>
+            <input type="text" class="input-field" id="teacher-cnic" name="teacher-cnic" required>
           </div>
 
           <!-- Designation -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="designation" class="form-label">Designation</label>
-            <input type="text" class="form-control" id="designation" name="designation" required>
+            <input type="text" class="input-field" id="designation" name="designation" required>
           </div>
 
           <!-- Qualification -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="qualification" class="form-label">Qualification</label>
-            <input type="text" class="form-control" id="qualification" name="qualification" required>
+            <input type="text" class="input-field" id="qualification" name="qualification" required>
           </div>
 
           <!-- Phone Number -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="phone-number" class="form-label">Phone Number</label>
-            <input type="text" class="form-control" id="phone-number" name="phone-number" required>
+            <input type="text" class="input-field" id="phone-number" name="phone-number" required>
           </div>
 
           <!-- New Password -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="new-password" class="form-label">New Password</label>
-            <input type="password" class="form-control" id="new-password" name="new-password" required>
+            <input type="password" class="input-field" id="new-password" name="new-password" required>
           </div>
 
           <!-- Confirm Password -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="confirm-password" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+            <input type="password" class="input-field" id="confirm-password" name="confirm-password" required>
           </div>
 
           <!-- Role -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="role" class="form-label">Role</label>
-            <select class="form-select" id="role" name="role" required>
+            <select class="input-field" id="role" name="role" required>
               <option selected disabled>Select Role</option>
               <option value="Teacher">Teacher</option>
               <option value="Admin">Admin</option>
@@ -76,7 +75,7 @@
           </div>
 
           <!-- Submit Button -->
-          <div class="col-md-12">
+          <div class="col-md-12 align-items-center">
             <button type="submit" class="btn btn-primary">Create Account</button>
           </div>
 

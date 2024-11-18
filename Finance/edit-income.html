@@ -2,14 +2,13 @@
   <div class="container" id="dynamic-content">
 
     <!-- Back Button -->
-    <div class="mb-4">
+    <div class="mb-4" style="text-align: right;">
       <a href="#" onclick="Route('Finance/show-income.html', 'content');" class="btn btn-primary">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
 
-    <h3 class="card-title fw-bold fs-4 mb-3">Update Income</h3>
-    <hr class="my-4">
+    <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Update Income</h3></div>
 
     <div class="card shadow-sm question-card">
       <div class="card-body">
@@ -19,15 +18,15 @@
           <div class="row g-3">
 
             <!-- Student ID -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="studentId" class="form-label"><strong>Student ID</strong></label>
-              <input type="text" class="form-control" id="studentId" name="studentId" placeholder="Enter Student ID" required>
+              <input type="text" class="input-field" id="studentId" name="studentId" placeholder="Enter Student ID" required>
             </div>
 
             <!-- Payment Mode -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="paymentMode" class="form-label"><strong>Payment Mode</strong></label>
-              <select class="form-select" id="paymentMode" name="paymentMode" required>
+              <select class="input-field" id="paymentMode" name="paymentMode" required>
                 <option selected disabled>Select Payment Mode</option>
                 <option value="Cash">Cash</option>
                 <option value="Card">Card</option>
@@ -36,31 +35,31 @@
             </div>
 
             <!-- Date -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="date" class="form-label"><strong>Date</strong></label>
-              <input type="date" class="form-control" id="date" name="date" required>
+              <input type="date" class="input-field" id="date" name="date" required>
             </div>
 
             <!-- Bill No -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="billNo" class="form-label"><strong>Bill No</strong></label>
-              <input type="text" class="form-control" id="billNo" name="billNo" placeholder="Enter Bill No" required>
+              <input type="text" class="input-field" id="billNo" name="billNo" placeholder="Enter Bill No" required>
             </div>
 
             <!-- Description -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="description" class="form-label"><strong>Description</strong></label>
-              <textarea class="form-control"  id="description" name="description" rows="1" placeholder="Enter Description" required></textarea>
+              <textarea class="input-field"  id="description" name="description" rows="1" placeholder="Enter Description" required></textarea>
             </div>
 
             <!-- Cost -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="cost" class="form-label"><strong>Cost</strong></label>
-              <input type="text" class="form-control" id="cost" name="cost" placeholder="Enter Cost" required>
+              <input type="text" class="input-field" id="cost" name="cost" placeholder="Enter Cost" required>
             </div>
 
             <!-- Action Buttons -->
-            <div class="col-12 d-flex justify-content-end gap-2 mt-3">
+            <div class="col-12 d-flex justify-content-end gap-2 mt-3" style="justify-content:center !important;">
               <button type="submit" class="btn btn-primary" id="updateBtn">Update</button>
               <button type="button" class="btn btn-danger" id="closeBtn">Close</button>
             </div>

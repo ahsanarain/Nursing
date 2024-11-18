@@ -2,8 +2,7 @@
   <div class="container" id="dynamic-content">
     <!-- Expenses Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-4 ">Remove EMI Number</h3>
-      <hr class="my-4">
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Remove EMI Number</h3></div>
 
       <!-- Edit Transaction Section -->
       <div class="row">
@@ -13,13 +12,13 @@
             <div class="card-body">
               <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
                 <!-- CNIC Input -->
-                <div class="col-md-6">
+                <div class="col-md-6 input-wrap">
                   <label for="cnic" class="form-label fw-semibold">CNIC</label>
-                  <input type="text" id="cnic" name="cnic" class="form-control" placeholder="Enter CNIC">
+                  <input type="text" id="cnic" name="cnic" class="input-field" placeholder="Enter CNIC">
                 </div>
 
                 <!-- Remove EMI Button -->
-                <div class="col-md-6 d-flex align-items-end">
+                <div class="col-md-6 d-flex align-items-center">
                   <button type="submit" class="btn btn-primary w-100">Remove EMI</button>
                 </div>
               </form>

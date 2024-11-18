@@ -2,9 +2,7 @@
   <div class="container" id="dynamic-content">
     <!-- Fees Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-3">Set Header</h3>
-
-      <hr class="my-4">
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Set Header</h3></div>
 
       <div class="row">
         <div class="col-12">
@@ -16,9 +14,9 @@
 
               <form class="row g-4" action="" onsubmit="return AddForm();" method="post">
                 <!-- Subject Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="subject" class="form-label">Subject</label>
-                  <select class="form-select" id="subject" name="subject" required>
+                  <select class="input-field" id="subject" name="subject" required>
                     <option selected disabled>Please Select Subject</option>
                     <option value="subject1">Subject 1</option>
                     <option value="subject2">Subject 2</option>
@@ -27,9 +25,9 @@
                 </div>
 
                 <!-- Semester Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="semester" class="form-label">Semester</label>
-                  <select class="form-select" id="semester" name="semester" required>
+                  <select class="input-field" id="semester" name="semester" required>
                     <option selected disabled>Please Select Semester</option>
                     <option value="semester1">Semester 1</option>
                     <option value="semester2">Semester 2</option>
@@ -38,9 +36,9 @@
                 </div>
 
                 <!-- Session Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="session" class="form-label">Session</label>
-                  <select class="form-select" id="session" name="session" required>
+                  <select class="input-field" id="session" name="session" required>
                     <option selected disabled>Please Select Session</option>
                     <option value="session1">Session 1</option>
                     <option value="session2">Session 2</option>
@@ -49,15 +47,15 @@
                 </div>
 
                 <!-- Date Input -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="date" class="form-label">Date</label>
-                  <input type="date" class="form-control" id="date" required>
+                  <input type="date" class="input-field" id="date" required>
                 </div>
 
                 <!-- Exam Type Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="exam-type" class="form-label">Exam Type</label>
-                  <select class="form-select" id="exam-type" name="exam-type" required>
+                  <select class="input-field" id="exam-type" name="exam-type" required>
                     <option selected disabled>Please Select Exam Type</option>
                     <option value="exam-type1">Exam Type 1</option>
                     <option value="exam-type2">Exam Type 2</option>
@@ -66,9 +64,9 @@
                 </div>
 
                 <!-- Total Marks Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="total-marks" class="form-label">Total Marks</label>
-                  <select class="form-select" id="total-marks" name="total-marks" required>
+                  <select class="input-field" id="total-marks" name="total-marks" required>
                     <option selected disabled>Please Select Total Marks</option>
                     <option value="total-marks1">Total Marks 1</option>
                     <option value="total-marks2">Total Marks 2</option>
@@ -77,9 +75,9 @@
                 </div>
 
                 <!-- Paper Time Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="paper-time" class="form-label">Paper Time</label>
-                  <select class="form-select" id="paper-time" name="paper-time" required>
+                  <select class="input-field" id="paper-time" name="paper-time" required>
                     <option selected disabled>Please Select Paper Time</option>
                     <option value="paper-time1">Paper Time 1</option>
                     <option value="paper-time2">Paper Time 2</option>
@@ -88,9 +86,9 @@
                 </div>
 
                 <!-- Passing Marks Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="passing-marks" class="form-label">Passing Marks</label>
-                  <select class="form-select" id="passing-marks" name="passing-marks" required>
+                  <select class="input-field" id="passing-marks" name="passing-marks" required>
                     <option selected disabled>Please Select Passing Marks</option>
                     <option value="passing-marks1">Passing Marks 1</option>
                     <option value="passing-marks2">Passing Marks 2</option>
@@ -99,9 +97,9 @@
                 </div>
 
                 <!-- Total Question Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="total-question" class="form-label">Total Question</label>
-                  <select class="form-select" id="total-question" name="total-question" required>
+                  <select class="input-field" id="total-question" name="total-question" required>
                     <option selected disabled>Please Select Total Question</option>
                     <option value="total-question1">Total Question 1</option>
                     <option value="total-question2">Total Question 2</option>
@@ -110,9 +108,9 @@
                 </div>
 
                 <!-- Faculty Name Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="faculty-name" class="form-label">Faculty Name</label>
-                  <select class="form-select" id="faculty-name" name="faculty-name" required>
+                  <select class="input-field" id="faculty-name" name="faculty-name" required>
                     <option selected disabled>Please Select Faculty Name</option>
                     <option value="faculty-name1">Faculty Name 1</option>
                     <option value="faculty-name2">Faculty Name 2</option>
@@ -121,7 +119,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <div class="col-12 col-lg-4 d-flex align-items-end">
+                <div class="col-12 col-lg-4 d-flex align-items-center">
                   <button type="submit" class="btn btn-primary w-100">Update Header</button>
                 </div>
               </form>

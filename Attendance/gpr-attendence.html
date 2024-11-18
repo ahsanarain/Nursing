@@ -2,9 +2,7 @@
   <div class="container" id="dynamic-content">
     <!-- Fees Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-3">GPR Attendence</h3>
-      <hr class="my-4">
-
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">GPR Attendance</h3></div>
 
       <div class="row justify-content-center">
         <div class="col-md-12">
@@ -14,13 +12,13 @@
             <div class="card-body">
               <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
                 <!-- Date Input Field -->
-                <div class="col-md-6">
+                <div class="col-md-6 input-wrap">
                   <label for="from-date" class="form-label"><strong>Date</strong></label>
-                  <input type="date" class="form-control" id="from-date" placeholder="Select Date">
+                  <input type="date" class="input-field" id="from-date" placeholder="Select Date">
                 </div>
 
                 <!-- Search Button -->
-                <div class="col-md-6 d-flex align-items-end">
+                <div class="col-md-6 d-flex align-items-center">
                   <button type="submit" class="btn btn-primary w-100">Search</button>
                 </div>
               </form>

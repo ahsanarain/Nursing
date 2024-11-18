@@ -2,7 +2,7 @@
   <div class="container" id="dynamic-content">
 
     <!-- Back Button -->
-    <div class="mb-4">
+    <div class="mb-4" style="text-align: right;">
       <a href="#" onclick="Route('Attendance/manual-attendence.html', 'content');" class="btn btn-primary" >
         <i class="fa-solid fa-arrow-left"></i>
       </a>
@@ -10,8 +10,7 @@
 
     <!-- Petty Cash Management Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-4 ">Add Clinical</h3>
-      <hr class="my-4">
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Add Clinical</h3></div>
 
       <div class="row justify-content-center">
         <div class="col-12 col-lg-12">
@@ -24,7 +23,7 @@
                 <!-- Course Selection -->
                 <div class="col-md-3">
                   <label for="select-course" class="form-label fw-bold">Course</label>
-                  <select class="form-select" aria-label="select-course" id="select-course">
+                  <select class="input-field" aria-label="select-course" id="select-course">
                     <option selected disabled>Please Select Course</option>
                     <option value="1">Course One</option>
                     <option value="2">Course Two</option>
@@ -35,7 +34,7 @@
                 <!-- Session Selection -->
                 <div class="col-md-3">
                   <label for="select-session" class="form-label fw-bold">Session</label>
-                  <select class="form-select" aria-label="select-session" id="select-session">
+                  <select class="input-field" aria-label="select-session" id="select-session">
                     <option selected disabled>Please Select Session</option>
                     <option value="1">Session One</option>
                     <option value="2">Session Two</option>
@@ -44,13 +43,13 @@
                 </div>
 
                 <!-- Date Input -->
-                <div class="col-md-3">
+                <div class="col-md-3 input-wrap">
                   <label for="edit-date" class="form-label fw-bold">Date</label>
-                  <input type="date" class="form-control" id="edit-date">
+                  <input type="date" class="input-field" id="edit-date">
                 </div>
 
                 <!-- Submit Button -->
-                <div class="col-md-3 d-flex align-items-end">
+                <div class="col-md-3 d-flex align-items-center">
                   <button type="submit" class="btn btn-primary w-100 shadow-sm">Add Class Attendance</button>
                 </div>
               </form>

@@ -2,7 +2,7 @@
   <div class="container" id="dynamic-content">
 
     <!-- Back Button -->
-    <div class="mb-4">
+    <div class="mb-4" style="text-align: right;">
       <a href="#" onclick="Route('Reports/report.html', 'content');" class="btn btn-primary" >
         <i class="fa-solid fa-arrow-left"></i>
       </a>
@@ -10,8 +10,7 @@
 
     <!-- SMS Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-4">Generate Voucher</h3>
-      <hr class="my-4">
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Generate Voucher</h3></div>
 
       <!-- Form Section -->
       <div class="row justify-content-center">
@@ -20,31 +19,30 @@
             <div class="card-body">
               <form class="row g-3"  action="" onsubmit="return AddForm();" method="post">
 
-                <h4 class="fw-bold fs-4 mb-4">Student Details</h4>
-                <hr class="my-4">
+                <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Student Details</h3></div>
 
                 <!-- Student Name -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="student-name" class="form-label"><strong>Student Name</strong></label>
-                  <input type="text" id="student-name" name="student-name" class="form-control" required>
+                  <input type="text" id="student-name" name="student-name" class="input-field" required>
                 </div>
 
                 <!-- Father Name -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="father-name" class="form-label"><strong>Father Name</strong></label>
-                  <input type="text" id="father-name" name="father-name" class="form-control" required>
+                  <input type="text" id="father-name" name="father-name" class="input-field" required>
                 </div>
 
                 <!-- Remaining Fees -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="remaining-fees" class="form-label"><strong>Remaining Fees</strong></label>
-                  <input type="number" id="remaining-fees" name="remaining-fees" class="form-control" required min="0">
+                  <input type="number" id="remaining-fees" name="remaining-fees" class="input-field" required min="0">
                 </div>
 
                 <!-- Fees Type -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="fees-type" class="form-label"><strong>Fees Type</strong></label>
-                  <select class="form-select" id="fees-type" name="fees-type" required>
+                  <select class="input-field" id="fees-type" name="fees-type" required>
                     <option selected disabled>Select Type</option>
                     <option value="type1">Type 1</option>
                     <option value="type2">Type 2</option>
@@ -53,43 +51,43 @@
                 </div>
 
                 <!-- Issue Date -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="issue-date" class="form-label"><strong>Issue Date</strong></label>
-                  <input type="date" id="issue-date" name="issue-date" class="form-control" required>
+                  <input type="date" id="issue-date" name="issue-date" class="input-field" required>
                 </div>
 
                 <!-- Due Date -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="due-date" class="form-label"><strong>Due Date</strong></label>
-                  <input type="date" id="due-date" name="due-date" class="form-control" required>
+                  <input type="date" id="due-date" name="due-date" class="input-field" required>
                 </div>
 
                 <!-- Admission and Monthly -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="admission-monthly" class="form-label"><strong>Admission and Monthly</strong></label>
-                  <input type="number" id="admission-monthly" name="admission-monthly" class="form-control" required min="0">
+                  <input type="number" id="admission-monthly" name="admission-monthly" class="input-field" required min="0">
                 </div>
 
                 <!-- Joining & Rel : Date -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="joining-rel-date" class="form-label"><strong>Joining & Rel: Date</strong></label>
-                  <input type="date" id="joining-rel-date" name="joining-rel-date" class="form-control" required>
+                  <input type="date" id="joining-rel-date" name="joining-rel-date" class="input-field" required>
                 </div>
 
                 <!-- Paid Amount -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="paid-amount" class="form-label"><strong>Paid Amount</strong></label>
-                  <input type="number" id="paid-amount" name="paid-amount" class="form-control" required min="0">
+                  <input type="number" id="paid-amount" name="paid-amount" class="input-field" required min="0">
                 </div>
 
                 <!-- Due Amount -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="due-amount" class="form-label"><strong>Due Amount</strong></label>
-                  <input type="number" id="due-amount" name="due-amount" class="form-control" required min="0">
+                  <input type="number" id="due-amount" name="due-amount" class="input-field" required min="0">
                 </div>
 
                 <!-- Generate Voucher Button -->
-                <div class="col-12 ">
+                <div class="col-12 align-items-center">
                   <button type="submit" class="btn btn-primary px-5 mt-3"><i class="fas fa-file-alt"></i> Generate Voucher</button>
                 </div>
 

@@ -2,14 +2,13 @@
   <div class="container" id="dynamic-content">
 
     <!-- Back Button -->
-    <div class="mb-4">
+    <div class="mb-4" style="text-align: right;">
       <a href="#" onclick="Route('Reception/letter-manager.html', 'content');" class="btn btn-primary">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
 
-    <h3 class="card-title mb-4">Create a Letter</h3>
-    <hr class="my-4">
+    <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Create a Letter</h3></div>
 
     <!-- Lecture Registration Section -->
     <div class="card shadow-sm mb-4 registration-card">
@@ -18,40 +17,40 @@
         <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
 
           <!-- Letter ID -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="letterId" class="form-label">Letter ID</label>
-            <input type="text" class="form-control" id="letterId" name="letterId" required>
+            <input type="text" class="input-field" id="letterId" name="letterId" required>
           </div>
 
           <!-- Title -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" name="title" required>
+            <input type="text" class="input-field" id="title" name="title" required>
           </div>
 
           <!-- Date -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="date" class="form-label">Date</label>
-            <input type="date" class="form-control" id="date" name="date" required>
+            <input type="date" class="input-field" id="date" name="date" required>
           </div>
 
           <!-- Staff Member -->
-          <div class="col-md-6">
+          <div class="col-md-6 input-wrap">
             <label for="staffMember" class="form-label">Staff Member</label>
-            <select name="staffMember" id="staffMember" class="form-select" required>
+            <select name="staffMember" id="staffMember" class="input-field" required>
               <option value="" disabled selected>Select Staff Member</option>
               <!-- Add more options as needed -->
             </select>
           </div>
 
           <!-- Textarea Editor -->
-          <div class="col-md-12">
+          <div class="col-md-12 input-wrap">
             <label for="letterContent" class="form-label">Letter Content</label>
-            <textarea class="form-control my_summernote"  name="letterContent" rows="10" required></textarea>
+            <textarea class="input-field my_summernote"  name="letterContent" rows="10" required></textarea>
           </div>
 
           <!-- Submit Button -->
-          <div class="col-md-12">
+          <div class="col-md-12 align-items-center">
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
 

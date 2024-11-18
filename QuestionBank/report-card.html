@@ -2,8 +2,7 @@
   <div class="container" id="dynamic-content">
     <!-- Library Management System Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-4 ">Student Report</h3>
-      <hr class="my-4">
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Student Report</h3></div>
 
       <!-- Form Section -->
       <div class="row justify-content-center">
@@ -15,9 +14,9 @@
               <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
 
                 <!-- Course Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="student-name" class="form-label">Student Name</label>
-                  <select class="form-select" id="student-name" name="student-name">
+                  <select class="input-field" id="student-name" name="student-name">
                     <option selected disabled> Please Select Student Name</option>
                     <option value="student-name1">student-name 1</option>
                     <option value="student-name2">student-name 2</option>
@@ -26,9 +25,9 @@
                 </div>
 
                 <!-- Semester Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="select-faculty" class="form-label">Select Select Faculty</label>
-                  <select class="form-select" id="select-faculty" name="select-faculty">
+                  <select class="input-field" id="select-faculty" name="select-faculty">
                     <option selected disabled>Please Select Faculty</option>
                     <option value="select-faculty1">select-faculty 1</option>
                     <option value="select-faculty2">select-faculty 2</option>
@@ -39,9 +38,9 @@
 
 
                 <!-- Semester Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="select-date" class="form-label">Select  Date</label>
-                  <select class="form-select" id="select-date" name="select-date">
+                  <select class="input-field" id="select-date" name="select-date">
                     <option selected disabled>Please Select Date</option>
                     <option value="select-date1">select-date 1</option>
                     <option value="select-date2">select-date 2</option>
@@ -52,7 +51,7 @@
 
 
                 <!-- Upload Button -->
-                <div class="col-md-6 col-lg-4 d-flex align-items-end">
+                <div class="col-md-6 col-lg-4 d-flex align-items-center" style="text-align: center;">
                   <button type="submit" class="btn btn-primary w-100">Get Result</button>
                 </div>
 

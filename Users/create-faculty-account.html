@@ -2,8 +2,8 @@
   <div class="container" id="dynamic-content">
     <!-- Create Faculty Account Section -->
     <div class="mb-4">
-      <h3 class="fw-bold fs-4 mb-4 ">Create Faculty Account</h3>
-      <hr class="my-4">
+
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Create Faculty Account</h3></div>
 
       <div class="text-center mb-4">
         <img src="../images/logo.jpeg" alt="Logo" class="img-fluid" style="max-width: 200px;">
@@ -15,8 +15,8 @@
         <div class="row justify-content-center">
           <div class="col-12 col-md-8">
             <form class="row align-items-center g-3" action="" onsubmit="return AddForm();" method="post">
-              <div class="col-12 col-md">
-                <input type="text" class="form-control" id="cnic" placeholder="Enter CNIC Number" required>
+              <div class="col-12 col-md  input-wrap">
+                <input type="text" class="input-field" id="cnic" placeholder="Enter CNIC Number" required>
               </div>
               <div class="col-12 col-md-auto d-grid gap-2 d-md-flex justify-content-md-start">
                 <a href="#" onclick="Route('Users/create-account.html', 'content');"  class="btn btn-primary">Create Account</a>

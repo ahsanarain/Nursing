@@ -2,14 +2,13 @@
   <div class="container" id="dynamic-content">
 
     <!-- Back Button -->
-    <div class="mb-4">
+    <div class="mb-4" style="text-align: right;">
       <a href="#" onclick="Route('Finance/staff-salary.html', 'content');" class="btn btn-primary" >
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
 
-    <h3 class="card-title fw-bold fs-4 mb-3">Add Staff Expenses</h3>
-    <hr class="my-4">
+    <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Add Staff Expenses</h3></div>
 
 
     <div class="card shadow-sm question-card">
@@ -19,43 +18,43 @@
           <div class="row g-3">
 
             <!-- Staff Name -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="staff_name" class="form-label"><strong>Staff Name</strong></label>
-              <select class="form-select" id="staff_name" name="staff_name" required>
+              <select class="input-field" id="staff_name" name="staff_name" required>
                 <option value="" selected disabled>Select Staff</option>
                 <!-- Add dynamic options here -->
               </select>
             </div>
 
             <!-- Month -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="month" class="form-label"><strong>Month</strong></label>
-              <select class="form-select" id="month" name="month" required>
+              <select class="input-field" id="month" name="month" required>
                 <option value="" selected disabled>Select Month</option>
                 <!-- Add dynamic options here -->
               </select>
             </div>
 
             <!-- Dispatch Date -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="dispatch_date" class="form-label"><strong>Dispatch Date</strong></label>
-              <input type="date" class="form-control" id="dispatch_date" name="dispatch_date" required>
+              <input type="date" class="input-field" id="dispatch_date" name="dispatch_date" required>
             </div>
 
             <!-- Description -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="description" class="form-label"><strong>Description</strong></label>
-              <textarea class="form-control" id="description" name="description" placeholder="Enter description" rows="1" required></textarea>
+              <textarea class="input-field" id="description" name="description" placeholder="Enter description" rows="1" required></textarea>
             </div>
 
             <!-- Amount -->
-            <div class="col-md-6">
+            <div class="col-md-6 input-wrap">
               <label for="amount" class="form-label"><strong>Amount</strong></label>
-              <input type="text" class="form-control" id="amount" name="amount" placeholder="Enter cost" required>
+              <input type="text" class="input-field" id="amount" name="amount" placeholder="Enter cost" required>
             </div>
 
             <!-- Action Buttons -->
-            <div class="col-12 d-flex justify-content-end gap-2 mt-3">
+            <div class="col-12 d-flex justify-content-end gap-2 mt-3" style="justify-content:center !important;">
               <button type="submit" class="btn btn-primary" id="addBillBtn">Add Record</button>
               <button type="button" class="btn btn-secondary" id="closeBtn">Close</button>
             </div>

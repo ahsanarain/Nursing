@@ -1,7 +1,7 @@
 <main class="content px-3 py-4">
   <div class="container" id="dynamic-content">
     <!-- Back Button -->
-    <div class="mb-4">
+    <div class="mb-4" style="text-align: right;">
       <a href="#" onclick="Route('Reports/authority-letter.html', 'content');" class="btn btn-primary">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
@@ -9,9 +9,7 @@
 
     <!-- Expenses Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-4">Authority Letter</h3>
-
-      <hr class="my-4">
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Authority Letter</h3></div>
 
       <div class="row">
         <div class="col-12">
@@ -21,7 +19,7 @@
                 <!-- Examination Board -->
                 <div class="col-md-6 col-lg-4">
                   <label for="exam-board" class="form-label">Examination Board</label>
-                  <select class="form-select" id="exam-board" name="exam-board">
+                  <select class="input-field" id="exam-board" name="exam-board">
                     <option value="">Select Board</option>
                     <option value="Board1">Board 1</option>
                     <option value="Board2">Board 2</option>
@@ -31,25 +29,25 @@
                 </div>
 
                 <!-- Examination Session -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="exam-session" class="form-label">Examination Session</label>
-                  <input type="text" class="form-control" id="exam-session" name="exam-session">
+                  <input type="text" class="input-field" id="exam-session" name="exam-session">
                 </div>
 
                 <!-- Roll No -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="roll-no" class="form-label">Roll No</label>
-                  <input type="text" class="form-control" id="roll-no" name="roll-no">
+                  <input type="text" class="input-field" id="roll-no" name="roll-no">
                 </div>
 
                 <!-- Examination Month -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="exam-month" class="form-label">Examination Month</label>
-                  <input type="text" class="form-control" id="exam-month" name="exam-month">
+                  <input type="text" class="input-field" id="exam-month" name="exam-month">
                 </div>
 
                 <!-- Generate Button -->
-                <div class="col-12 col-lg-4 d-flex align-items-end">
+                <div class="col-12 col-lg-4 d-flex align-items-center">
                   <button type="submit" class="btn btn-primary w-100">Generate Report</button>
                 </div>
               </form>

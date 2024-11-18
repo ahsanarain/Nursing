@@ -1,7 +1,7 @@
 <main class="content px-3 py-4">
   <div class="container" id="dynamic-content">
     <!-- Back Button -->
-    <div class="mb-4">
+    <div class="mb-4" style="text-align: right;">
       <a href="#" onclick="Route('Reports/report.html', 'content');" class="btn btn-primary">
         <i class="fa-solid fa-arrow-left"></i>
       </a>
@@ -9,9 +9,7 @@
 
     <!-- Expenses Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-4">Verification Of Documents</h3>
-
-      <hr class="my-4">
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Verification Of Documents</h3></div>
 
       <div class="row">
         <div class="col-12">
@@ -19,9 +17,9 @@
             <div class="card-body">
               <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
                 <!-- Transaction Section -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="course" class="form-label">Course</label>
-                  <select class="form-select" id="course" name="course">
+                  <select class="input-field" id="course" name="course">
                     <option value="">Select Course</option>
                     <option value="Course1">Course 1</option>
                     <option value="Course2">Course 2</option>
@@ -30,9 +28,9 @@
                   </select>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="session" class="form-label">Session</label>
-                  <select class="form-select" id="session" name="session">
+                  <select class="input-field" id="session" name="session">
                     <option value="">Select Session</option>
                     <option value="Session1">Session 1</option>
                     <option value="Session2">Session 2</option>
@@ -41,9 +39,9 @@
                   </select>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="month" class="form-label">Month</label>
-                  <select class="form-select" id="month" name="month">
+                  <select class="input-field" id="month" name="month">
                     <option value="">Select Month</option>
                     <option value="January">January</option>
                     <option value="February">February</option>
@@ -60,9 +58,9 @@
                   </select>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="year" class="form-label">Year</label>
-                  <select class="form-select" id="year" name="year">
+                  <select class="input-field" id="year" name="year">
                     <option value="">Select Year</option>
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
@@ -71,7 +69,7 @@
                   </select>
                 </div>
 
-                <div class="col-12 col-lg-4 d-flex align-items-end">
+                <div class="col-12 col-lg-4 d-flex align-items-center">
                   <button type="submit" class="btn btn-primary w-100">Generate Outstanding (Bulk)</button>
                 </div>
               </form>

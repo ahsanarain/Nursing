@@ -2,14 +2,14 @@
     <div class="container" id="dynamic-content">
 
         <!-- Back Button -->
-        <div class="mb-4">
+        <div class="mb-4" style="text-align: right;">
             <a href="#" onclick="Route('Users/student-record.html', 'content');" class="btn btn-primary" >
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
         </div>
 
-        <h3 class="card-title mb-4">Student Registration Form</h3>
-        <hr class="my-4">
+        <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Student Registration Form</h3></div>
+
         <!-- Student Registration Section -->
         <div class="card shadow-sm mb-4 registration-card">
             <div class="card-body">
@@ -17,226 +17,228 @@
 
                 <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
                     <!-- CNIC Number Input -->
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6 mb-3 input-wrap">
                         <label for="cnic" class="form-label">CNIC Number</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="cnic" placeholder="Enter CNIC Number" aria-label="CNIC Number" required>
-                            <button class="btn btn-primary" type="button" id="button-addon2">
-                                <i class="fa-solid fa-check"></i>
-                            </button>
-                        </div>
+                        <input type="text" class="input-field" id="cnic" placeholder="Enter CNIC Number" aria-label="CNIC Number" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3 input-wrap">
+                        <label for="cnic" class="form-label"></label>
+                        <button class="btn btn-primary" type="button" id="button-addon2">
+                            <i class="fa-solid fa-check"></i>
+                        </button>
                     </div>
 
                     <!-- Course Section -->
                     <h4 class="card-title mt-5">Course Information</h4>
                     <hr class="my-2">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="course" class="form-label">Course</label>
-                        <select class="form-select" id="course" required>
+                        <select class="input-field" id="course" required>
                             <option selected disabled>Please Select Course</option>
                             <option value="Generic">Generic</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="joining-date" class="form-label">Joining Date</label>
-                        <input type="date" class="form-control" id="joining-date" required>
+                        <input type="date" class="input-field" id="joining-date" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="admission-fees" class="form-label">Admission Fees</label>
-                        <input type="text" class="form-control" id="admission-fees" placeholder="Admission Fees" required>
+                        <input type="text" class="input-field" id="admission-fees" placeholder="Admission Fees" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="reference" class="form-label">Reference</label>
-                        <input type="text" class="form-control" id="reference" placeholder="Reference Name" required>
+                        <input type="text" class="input-field" id="reference" placeholder="Reference Name" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="session" class="form-label">Session</label>
-                        <select class="form-select" id="session" required>
+                        <select class="input-field" id="session" required>
                             <option selected disabled>Select Session</option>
                             <option value="Generic">Generic</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="relieving-date" class="form-label">Relieving Date</label>
-                        <input type="date" class="form-control" id="relieving-date" required>
+                        <input type="date" class="input-field" id="relieving-date" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="monthly-fees" class="form-label">Monthly Fees</label>
-                        <input type="text" class="form-control" id="monthly-fees" placeholder="Monthly Fees" required>
+                        <input type="text" class="input-field" id="monthly-fees" placeholder="Monthly Fees" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="ref-contact" class="form-label">Reference Contact</label>
-                        <input type="text" class="form-control" id="ref-contact" placeholder="Reference Contact Number" required>
+                        <input type="text" class="input-field" id="ref-contact" placeholder="Reference Contact Number" required>
                     </div>
 
                     <!-- Biodata Section -->
                     <h4 class="card-title mt-5">Student's Biodata</h4>
                     <hr class="my-2">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="candidate-name" class="form-label">Candidate Name</label>
-                        <input type="text" class="form-control" id="candidate-name" placeholder="Candidate Name" required>
+                        <input type="text" class="input-field" id="candidate-name" placeholder="Candidate Name" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="dob" class="form-label">DOB</label>
-                        <input type="date" class="form-control" id="dob" required>
+                        <input type="date" class="input-field" id="dob" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="domicile" class="form-label">Domicile</label>
-                        <select class="form-select" id="domicile" required>
+                        <select class="input-field" id="domicile" required>
                             <option selected disabled>Select Domicile</option>
                             <option value="Generic">Generic</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="religion" class="form-label">Religion</label>
-                        <select class="form-select" id="religion" required>
+                        <select class="input-field" id="religion" required>
                             <option selected disabled>Select Religion</option>
                             <option value="Generic">Generic</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="contact" class="form-label">Contact</label>
-                        <input type="text" class="form-control" id="contact" placeholder="Contact" required>
+                        <input type="text" class="input-field" id="contact" placeholder="Contact" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="pnc-reg" class="form-label">PNC Registration</label>
-                        <input type="text" class="form-control" id="pnc-reg" placeholder="PNC Registration" required>
+                        <input type="text" class="input-field" id="pnc-reg" placeholder="PNC Registration" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="pnc-pre-reg" class="form-label">PNC Pre Registration</label>
-                        <input type="text" class="form-control" id="pnc-pre-reg" placeholder="PNC Pre Registration" required>
+                        <input type="text" class="input-field" id="pnc-pre-reg" placeholder="PNC Pre Registration" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="board-enroll" class="form-label">Board Enrollment</label>
-                        <input type="text" class="form-control" id="board-enroll" placeholder="Board Enrollment Number" required>
+                        <input type="text" class="input-field" id="board-enroll" placeholder="Board Enrollment Number" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="transcript" class="form-label">Upload Transcript</label>
-                        <input type="file" class="form-control" id="transcript" required>
+                        <input type="file" class="input-field" id="transcript" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="father-name" class="form-label">Father's Name</label>
-                        <input type="text" class="form-control" id="father-name" placeholder="Father's Name" required>
+                        <input type="text" class="input-field" id="father-name" placeholder="Father's Name" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="father-contact" class="form-label">Father's Contact</label>
-                        <input type="text" class="form-control" id="father-contact" placeholder="Father's Contact" required>
+                        <input type="text" class="input-field" id="father-contact" placeholder="Father's Contact" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="gender" class="form-label">Gender</label>
-                        <select class="form-select" id="gender" required>
+                        <select class="input-field" id="gender" required>
                             <option selected disabled>Select Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="nationality" class="form-label">Nationality</label>
-                        <select class="form-select" id="nationality" required>
+                        <select class="input-field" id="nationality" required>
                             <option selected disabled>Select Nationality</option>
                             <option value="Pakistani">Pakistani</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="blood-group" class="form-label">Blood Group</label>
-                        <select class="form-select" id="blood-group" required>
+                        <select class="input-field" id="blood-group" required>
                             <option selected disabled>Select Blood Group</option>
                             <option value="O+">O+</option>
                             <option value="A+">A+</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="student-cnic" class="form-label">CNIC</label>
-                        <input type="text" class="form-control" id="student-cnic" placeholder="Enter CNIC" required>
+                        <input type="text" class="input-field" id="student-cnic" placeholder="Enter CNIC" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="student-email" class="form-label">Student Email</label>
-                        <input type="email" class="form-control" id="student-email" placeholder="Student Email" required>
+                        <input type="email" class="input-field" id="student-email" placeholder="Student Email" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="post-address" class="form-label">Postal Address</label>
-                        <input type="text" class="form-control" id="post-address" placeholder="Postal Address" required>
+                        <input type="text" class="input-field" id="post-address" placeholder="Postal Address" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="student-image" class="form-label">Upload Student Image</label>
-                        <input type="file" class="form-control" id="student-image" required>
+                        <input type="file" class="input-field" id="student-image" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="educational-cert" class="form-label">Upload Educational Certificates</label>
-                        <input type="file" class="form-control" id="educational-cert" required>
+                        <input type="file" class="input-field" id="educational-cert" required>
                     </div>
 
                     <!-- Matric (Science) -->
                     <h4 class="card-title mt-5">Matric (Science)</h4>
                     <hr class="my-2">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="matric-year" class="form-label">Passing Year</label>
-                        <select class="form-select" id="matric-year" required>
+                        <select class="input-field" id="matric-year" required>
                             <option selected disabled>Select Passing Year</option>
                             <option value="Generic">Generic</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="matric-total-marks" class="form-label">Total Marks</label>
-                        <input type="text" class="form-control" id="matric-total-marks" placeholder="Total Marks" required>
+                        <input type="text" class="input-field" id="matric-total-marks" placeholder="Total Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="matric-bio-marks" class="form-label">Biology Total Marks (9th+10th)</label>
-                        <input type="text" class="form-control" id="matric-bio-marks" placeholder="Biology Total Marks" required>
+                        <input type="text" class="input-field" id="matric-bio-marks" placeholder="Biology Total Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="matric-board" class="form-label">Matric Board</label>
-                        <select class="form-select" id="matric-board" required>
+                        <select class="input-field" id="matric-board" required>
                             <option selected disabled>Select Board</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="matric-obtain-marks" class="form-label">Obtain Marks</label>
-                        <input type="text" class="form-control" id="matric-obtain-marks" placeholder="Obtained Marks" required>
+                        <input type="text" class="input-field" id="matric-obtain-marks" placeholder="Obtained Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="matric-bio-obtain-marks" class="form-label">Biology Obtain Marks (9th+10th)</label>
-                        <input type="text" class="form-control" id="matric-bio-obtain-marks" placeholder="Biology Obtained Marks" required>
+                        <input type="text" class="input-field" id="matric-bio-obtain-marks" placeholder="Biology Obtained Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="matric-grade" class="form-label">Grade/Division</label>
-                        <select class="form-select" id="matric-grade" required>
+                        <select class="input-field" id="matric-grade" required>
                             <option selected disabled>Select Grade/Division</option>
                             <option value="Pakistani">Pakistani</option>
                         </select>
@@ -246,46 +248,46 @@
                     <h4 class="card-title mt-5">Intermediate (Pre-Medical)</h4>
                     <hr class="my-2">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="inter-year" class="form-label">Passing Year</label>
-                        <select class="form-select" id="inter-year" required>
+                        <select class="input-field" id="inter-year" required>
                             <option selected disabled>Select Passing Year</option>
                             <option value="Generic">Generic</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="inter-total-marks" class="form-label">Total Marks</label>
-                        <input type="text" class="form-control" id="inter-total-marks" placeholder="Total Marks" required>
+                        <input type="text" class="input-field" id="inter-total-marks" placeholder="Total Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="inter-bio-marks" class="form-label">Biology Total Marks (11th+12th)</label>
-                        <input type="text" class="form-control" id="inter-bio-marks" placeholder="Biology Total Marks" required>
+                        <input type="text" class="input-field" id="inter-bio-marks" placeholder="Biology Total Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="inter-board" class="form-label">Intermediate Board</label>
-                        <select class="form-select" id="inter-board" required>
+                        <select class="input-field" id="inter-board" required>
                             <option selected disabled>Select Board</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="inter-obtain-marks" class="form-label">Obtain Marks</label>
-                        <input type="text" class="form-control" id="inter-obtain-marks" placeholder="Obtained Marks" required>
+                        <input type="text" class="input-field" id="inter-obtain-marks" placeholder="Obtained Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="inter-bio-obtain-marks" class="form-label">Biology Obtain Marks (11th+12th)</label>
-                        <input type="text" class="form-control" id="inter-bio-obtain-marks" placeholder="Biology Obtained Marks" required>
+                        <input type="text" class="input-field" id="inter-bio-obtain-marks" placeholder="Biology Obtained Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="inter-grade" class="form-label">Grade/Division</label>
-                        <select class="form-select" id="inter-grade" required>
+                        <select class="input-field" id="inter-grade" required>
                             <option selected disabled>Select Grade/Division</option>
                             <option value="Pakistani">Pakistani</option>
                         </select>
@@ -295,37 +297,37 @@
                     <h4 class="card-title mt-5">Nursing</h4>
                     <hr class="my-2">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="nursing-roll" class="form-label">Passing Roll NO</label>
-                        <input type="text" class="form-control" id="nursing-roll" placeholder="Passing Roll NO" required>
+                        <input type="text" class="input-field" id="nursing-roll" placeholder="Passing Roll NO" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="nursing-obtain-marks" class="form-label">Obtaine Marks:</label>
-                        <input type="text" class="form-control" id="nursing-obtain-marks" placeholder="Obtaine Marks" required>
+                        <input type="text" class="input-field" id="nursing-obtain-marks" placeholder="Obtaine Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="nursing-grade" class="form-label">Grade/Division</label>
-                        <select class="form-select" id="nursing-grade" required>
+                        <select class="input-field" id="nursing-grade" required>
                             <option selected disabled>Select Grade/Division</option>
                             <option value="Pakistani">Pakistani</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="nursing-year" class="form-label">Passing Year</label>
-                        <input type="text" class="form-control" id="nursing-year" placeholder="Passing Year" required>
+                        <input type="text" class="input-field" id="nursing-year" placeholder="Passing Year" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="nursing-total-marks" class="form-label">Total Marks</label>
-                        <input type="text" class="form-control" id="nursing-total-marks" placeholder="Total Marks" required>
+                        <input type="text" class="input-field" id="nursing-total-marks" placeholder="Total Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="nursing-board" class="form-label">Nursing Board</label>
-                        <select class="form-select" id="nursing-board" required>
+                        <select class="input-field" id="nursing-board" required>
                             <option selected disabled>Select Board</option>
                             <option value="Pakistani">Pakistani</option>
                         </select>
@@ -335,51 +337,51 @@
                     <h4 class="card-title mt-5">PB Specialization</h4>
                     <hr class="my-2">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="pb-roll" class="form-label">Passing Roll NO</label>
-                        <input type="text" class="form-control" id="pb-roll" placeholder="Passing Roll NO" required>
+                        <input type="text" class="input-field" id="pb-roll" placeholder="Passing Roll NO" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="pb-obtain-marks" class="form-label">Obtaine Marks:</label>
-                        <input type="text" class="form-control" id="pb-obtain-marks" placeholder="Obtaine Marks" required>
+                        <input type="text" class="input-field" id="pb-obtain-marks" placeholder="Obtaine Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="pb-grade" class="form-label">Grade/Division</label>
-                        <select class="form-select" id="pb-grade" required>
+                        <select class="input-field" id="pb-grade" required>
                             <option selected disabled>Select Grade/Division</option>
                             <option value="Pakistani">Pakistani</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="pb-specialty" class="form-label">Specialty Type</label>
-                        <select class="form-select" id="pb-specialty" required>
+                        <select class="input-field" id="pb-specialty" required>
                             <option selected disabled>Specialty</option>
                             <option value="Pakistani">Pakistani</option>
                         </select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="pb-year" class="form-label">Passing Year</label>
-                        <input type="text" class="form-control" id="pb-year" placeholder="Passing Year" required>
+                        <input type="text" class="input-field" id="pb-year" placeholder="Passing Year" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="pb-total-marks" class="form-label">Total Marks</label>
-                        <input type="text" class="form-control" id="pb-total-marks" placeholder="Total Marks" required>
+                        <input type="text" class="input-field" id="pb-total-marks" placeholder="Total Marks" required>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 input-wrap">
                         <label for="pb-board" class="form-label">Nursing Board</label>
-                        <select class="form-select" id="pb-board" required>
+                        <select class="input-field" id="pb-board" required>
                             <option selected disabled>Select Board</option>
                             <option value="Pakistani">Pakistani</option>
                         </select>
                     </div>
 
-                    <div class="col-md-12">
+                    <div class="col-md-12 align-items-center">
                         <button type="submit" class="btn btn-primary">Save Record</button>
                     </div>
                 </form>

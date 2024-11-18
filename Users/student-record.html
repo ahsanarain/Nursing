@@ -2,9 +2,9 @@
   <div class="container" id="dynamic-content">
     <!-- Fees Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-3">Student Record</h3>
 
-      <hr class="my-4">
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Student Record</h3></div>
+
       <!-- Add Student Button -->
       <div class="row mb-4">
         <div class="col-12 text-end">
@@ -25,9 +25,9 @@
 
 
                 <!-- To Date / Session Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="course" class="form-label">Course</label>
-                  <select class="form-select" id="course" name="course">
+                  <select class="input-field" id="course" name="course">
                     <option selected disabled>Please Select Course</option>
                     <option value="session1">Course 1</option>
                     <option value="session2">Course 2</option>
@@ -38,9 +38,9 @@
 
 
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="session" class="form-label">Session</label>
-                  <select class="form-select" id="session" name="session">
+                  <select class="input-field" id="session" name="session">
                     <option selected disabled>Please Select Session</option>
                     <option value="session1">Session 1</option>
                     <option value="session2">Session 2</option>
@@ -51,7 +51,7 @@
 
 
 
-                <div class="col-12 col-lg-4 d-flex align-items-end">
+                <div class="col-12 col-lg-4 d-flex align-items-center">
                   <button type="submit" class="btn btn-primary w-100">Search</button>
                 </div>
               </form>
@@ -93,7 +93,7 @@
                 <td>GBSN-2024-27</td>
                 <td>
                   <div class="form-group">
-                    <select id="transcriptSelect" class="form-select" aria-label="Select Transcript">
+                    <select id="transcriptSelect" class="input-field" aria-label="Select Transcript">
                       <option selected>Select Transcript</option>
                       <option value="1">Transcript 1</option>
                       <option value="2">Transcript 2</option>
@@ -104,7 +104,7 @@
 
                 <td>
                   <div class="form-group">
-                    <select id="documentSelect" class="form-select" aria-label="Select Document">
+                    <select id="documentSelect" class="input-field" aria-label="Select Document">
                       <option selected>Select Document</option>
                       <option value="1">document 1</option>
                       <option value="2">document 2</option>
@@ -117,7 +117,7 @@
                 </td>
 
                 <td>
-                  <div class="d-flex justify-content-center gap-2">
+                  <div class="d-flex gap-2">
                     <a href="#" onclick="Route('Users/view-student-record.html', 'content');" class="btn btn-sm btn-outline-success" title="View">
                       <i class="fa-solid fa-eye"></i>
                     </a>

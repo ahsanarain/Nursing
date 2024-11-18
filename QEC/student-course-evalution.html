@@ -2,9 +2,8 @@
   <div class="container" id="dynamic-content">
     <!-- Expenses Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-4 ">Welcome To Quality Enhancement Cell</h3>
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Welcome To Quality Enhancement Cell</h3></div>
 
-      <hr class="my-4">
       <div class="mb-3 text-end">
         <p>18-Sep-2024 09:10 PM</p>
       </div>
@@ -22,9 +21,9 @@
               <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
 
                 <!-- To Date / Session Select -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="semester" class="form-label">Semester</label>
-                  <select class="form-select" id="semester" name="semester">
+                  <select class="input-field" id="semester" name="semester">
                     <option selected disabled>Please Select Semester</option>
                     <option value="semester1">Semester 1</option>
                     <option value="semester2">Semester 2</option>
@@ -33,9 +32,9 @@
                   </select>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="course" class="form-label">Course / Subject</label>
-                  <select class="form-select" id="course" name="course">
+                  <select class="input-field" id="course" name="course">
                     <option selected disabled>Please Select Course</option>
                     <option value="course1">Course 1</option>
                     <option value="course2">Course 2</option>
@@ -45,7 +44,7 @@
                 </div>
 
 
-                <div class="col-12 col-lg-4 d-flex align-items-end">
+                <div class="col-12 col-lg-4 d-flex align-items-center">
                   <button type="submit" class="btn btn-primary w-100">Next</button>
                 </div>
               </form>

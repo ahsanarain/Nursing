@@ -2,9 +2,7 @@
   <div class="container" id="dynamic-content">
     <!-- Expenses Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-4 ">Petty Cash Management</h3>
-
-      <hr class="my-4">
+      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Petty Cash Management</h3></div>
 
       <div class="row">
         <div class="col-12">
@@ -14,17 +12,17 @@
             <div class="card-body">
               <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
                 <!-- Transaction Section -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="from-date" class="form-label">From</label>
-                  <input type="date" class="form-control" id="from-date">
+                  <input type="date" class="input-field" id="from-date">
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="to-date" class="form-label">To</label>
-                  <input type="date" class="form-control" id="to-date">
+                  <input type="date" class="input-field" id="to-date">
                 </div>
 
-                <div class="col-12 col-lg-4 d-flex align-items-end">
+                <div class="col-12 col-lg-4 d-flex align-items-center" style="justify-content:center !important;">
                   <button type="submit" class="btn btn-primary w-100">Generate Report</button>
                 </div>
               </form>

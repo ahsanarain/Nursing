@@ -26,14 +26,12 @@
                   document.getElementById(''+sDiv+'').innerHTML = html;
                 })
                 .catch(error => console.error('Error loading HTML:', error));
-        return false;
       }
       Route('Dashboard/Dashboard.html', 'content');
     </script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/dataTables.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/forms.js"></script>
     <script src="assets/js/main.min.js"></script>
     <style>
       @media (max-width: 768px) {
@@ -315,11 +313,6 @@
                   >Teacher Evaluation</a
                 >
               </li>
-              <li class="sidebar-item">
-                <a href="#" class="sidebar-link"
-                  >Active
-                </a>
-              </li>
             </ul>
           </li>
 
@@ -544,5 +537,6 @@
         </div>
       </div>
     </div>
+    <script src="assets/js/forms.js"></script>
   </body>
 </html>

@@ -2,14 +2,13 @@
   <div class="container" id="dynamic-content">
 
     <!-- Back Button -->
-    <div class="mb-4">
+    <div class="mb-4" style="text-align: right;">
       <a href="#" onclick="Route('Finance/fees.html', 'content');" class="btn btn-primary" >
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
 
-    <h3 class="card-title fw-bold fs-4 mb-3">Update Fees Portal</h3>
-    <hr class="my-4">
+    <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Update Fees Portal</h3></div>
 
     <!-- Fees Section -->
     <div class="card shadow-sm mb-4 profile-card">
@@ -52,44 +51,44 @@
         <form id="updateForm" action="" onsubmit="return AddForm();" method="post">
           <div class="row g-3">
             <!-- Amount Paid -->
-            <div class="col-md-4">
+            <div class="col-md-4 input-wrap">
               <label for="receipt_no" class="form-label"><strong>Amount Paid</strong></label>
-              <input type="text" class="form-control" id="receipt_no" name="receipt_no" value="2103">
+              <input type="text" class="input-field" id="receipt_no" name="receipt_no" value="2103">
             </div>
 
             <!-- Pay Date -->
-            <div class="col-md-4">
+            <div class="col-md-4 input-wrap">
               <label for="pay_date" class="form-label"><strong>Pay Date</strong></label>
-              <input type="date" class="form-control" id="pay_date" name="pay_date" value="2021-01-01">
+              <input type="date" class="input-field" id="pay_date" name="pay_date" value="2021-01-01">
             </div>
 
             <!-- Fees Type -->
-            <div class="col-md-4">
+            <div class="col-md-4 input-wrap">
               <label for="fees" class="form-label"><strong>Fees Type</strong></label>
-              <input type="number" class="form-control" id="fees" name="fees" value="66000">
+              <input type="number" class="input-field" id="fees" name="fees" value="66000">
             </div>
 
             <!-- Cash Receipt -->
-            <div class="col-md-4">
+            <div class="col-md-4 input-wrap">
               <label for="cash_receipt" class="form-label"><strong>Cash Receipt</strong></label>
-              <input type="number" class="form-control" id="cash_receipt" name="cash_receipt" value="66000">
+              <input type="number" class="input-field" id="cash_receipt" name="cash_receipt" value="66000">
             </div>
 
             <!-- E-Voucher -->
-            <div class="col-md-4">
+            <div class="col-md-4 input-wrap">
               <label for="e_voucher" class="form-label"><strong>Electronic Voucher</strong></label>
-              <input type="text" class="form-control" id="e_voucher" name="e_voucher" value="2103">
+              <input type="text" class="input-field" id="e_voucher" name="e_voucher" value="2103">
             </div>
 
             <!-- Online Cash -->
-            <div class="col-md-4">
+            <div class="col-md-4 input-wrap">
               <label for="online" class="form-label"><strong>Online Cash</strong></label>
-              <input type="text" class="form-control" id="online" name="online" value="00">
+              <input type="text" class="input-field" id="online" name="online" value="00">
             </div>
           </div>
 
           <!-- Action Buttons -->
-          <div class="d-flex justify-content-end gap-2 mt-3">
+          <div class="d-flex justify-content-end gap-2 mt-3" style="justify-content:center !important;">
             <button type="button" class="btn btn-success" id="updateBtn">Update</button>
             <button type="submit" class="btn btn-primary" id="saveBtn">Cancel</button>
             <button type="button" class="btn btn-danger" id="deleteBtn">Delete</button>

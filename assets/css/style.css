@@ -451,6 +451,23 @@ button.btn-secondary svg, button.btn-success svg, button.btn-danger svg{
   background-color: #5a6268;
 }
 
+td button.btn-outline-warning, td button.btn-outline-success, td div button.btn-outline-warning, td div button.btn-outline-success {
+  border: none !important;
+  color: #fff !important;
+  background-color: #198754 !important;
+  transition: background-color 0.2s ease-in-out !important;
+}
+
+td button.btn-outline-warning:hover, td button.btn-outline-success:hover,td div button.btn-outline-warning:hover, td div button.btn-outline-success:hover {
+  color: #fff !important;
+  background-color: #02653a !important;
+}
+
+td button.btn-outline-warning:active, td button.btn-outline-success:active,td div button.btn-outline-warning:active, td div button.btn-outline-success:active{
+  background-color: #02653a !important;
+  color: #fff !important;
+}
+
 .table th,
 .table td {
   vertical-align: middle;
@@ -463,6 +480,43 @@ button.btn-secondary svg, button.btn-success svg, button.btn-danger svg{
 .table-responsive {
   border-radius: 0.375rem;
   overflow-x: auto;
+}
+
+.align-items-center{
+  text-align: center !important;
+}
+
+td div button.btn-sm{
+  padding: 4px 8px;
+  font-size: 0.875rem;
+}
+
+td button.btn-sm{
+  padding: 4px 8px;
+  font-size: 0.875rem;
+}
+
+td div a.btn-sm{
+  padding: 4px 8px;
+  font-size: 0.875rem;
+}
+
+td a.btn-sm{
+  padding: 4px 8px;
+  font-size: 0.875rem;
+}
+
+
+
+td div button.btn-sm:hover, td button.btn-sm:hover, td div a.btn-sm:hover, td a.btn-sm:hover{
+  svg{
+    color: var(--white) !important;
+  }
+}
+
+td div button.btn:hover, td button.btn:hover, td div a.btn:hover, td a.btn:hover{
+  border: 1px solid var(--dark-blue) !important;
+  background-color: var(--dark-blue) !important;
 }
 
 /* Calendar styling */
@@ -498,4 +552,35 @@ button.btn-secondary svg, button.btn-success svg, button.btn-danger svg{
     padding: 0.375rem 0.75rem;
     font-size: 0.875rem; /* or 0.9rem if needed */
   }
+}
+
+form, p strong, p span,input
+{
+  font-family: "Poppins", sans-serif;
+}
+
+.input-wrap
+{
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  height: 37px;
+  margin-bottom: 2rem;
+}
+
+.input-field {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #bbb;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #151111;
+  transition: 0.4s;
+}
+
+.input-field:focus
+{
+  border-bottom-color: #27426d;
 }
