@@ -1,4 +1,6 @@
-<div class="container" id="dynamic-content">
+    <script>
+        $("#myTable").DataTable();
+    </script>
     <!-- Dashboard Title -->
     <h3 class="fw-bold fs-4 mb-3 bold-font"><i class="fa fa-solid fa-house"  style="font-size: 30px;"></i> My Dashboard </h3>
 
@@ -130,79 +132,3 @@
             </div>
         </div>
     </div>
-</div>
-<!-- Chart.js Doughnut Chart Setup -->
-<script>
-    const ctx = document.getElementById("doughnutChart").getContext("2d");
-    const doughnutChart = new Chart(ctx, {
-        type: "doughnut",
-        data: {
-            labels: ["Present", "Leave", "Applications", "Active"],
-            datasets: [
-                {
-                    label: "Student Stats",
-                    data: [522, 50, 100, 450],
-                    backgroundColor: [
-                        "rgba(75, 192, 192, 0.2)",
-                        "rgba(255, 99, 132, 0.2)",
-                        "rgba(54, 162, 235, 0.2)",
-                        "rgba(153, 102, 255, 0.2)",
-                    ],
-                    borderColor: [
-                        "rgba(75, 192, 192, 1)",
-                        "rgba(255, 99, 132, 1)",
-                        "rgba(54, 162, 235, 1)",
-                        "rgba(153, 102, 255, 1)",
-                    ],
-                    borderWidth: 1,
-                },
-            ],
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: "top",
-                },
-            },
-            cutout: "70%", // Creates doughnut effect
-        },
-    });
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var calendarEl = document.getElementById("calendar");
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: "dayGridMonth",
-            headerToolbar: {
-                // left: "prev,next today",
-                // center: "title",
-                // right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
-            },
-            events: [
-                {
-                    title: "Meeting",
-                    start: "2024-09-30",
-                },
-                {
-                    title: "Conference",
-                    start: "2024-10-05",
-                    end: "2024-10-07",
-                },
-                {
-                    title: "Birthday Party",
-                    start: "2024-10-09T19:00:00",
-                },
-            ],
-            // Ensure the calendar is responsive
-            windowResize: function (view) {
-                calendar.updateSize();
-            },
-        });
-
-        calendar.render();
-    });
-</script>

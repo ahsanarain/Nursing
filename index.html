@@ -6,33 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Al-Jadoon College of Nursing and Health Sciences</title>
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
-    <script src="assets/fontawesome/js/all.min.js"></script>
+    <script src="assets/fontawesome/js/all.min.js" type="application/javascript" defer></script>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="shortcut icon" href="./images/logo_circle.png" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/dataTables.dataTables.css"/>
     <link href="assets/css/main.min.css" rel="stylesheet"/>
-    <script src="assets/js/iziToast.min.js"></script>
+    <script src="assets/js/iziToast.min.js" type="application/javascript" defer></script>
     <link rel="stylesheet" href="assets/css/iziToast.css"/>
     <link rel="stylesheet" href="assets/css/iziToast.min.css"/>
-    <script src="assets/js/jquery-3.7.1.js"></script>
-    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/dataTables.js" type="application/javascript" defer></script>
+    <script src="assets/js/bootstrap.bundle.min.js" type="application/javascript" defer></script>
+    <script src="assets/js/script.js" type="application/javascript" defer></script>
+    <script src="assets/js/forms.js" type="application/javascript" defer></script>
     <script>
+      $(document).ready(function () {
+        $("#myTable").DataTable();
+      });
       function Route(sPath, sDiv)
       {
         fetch(''+sPath+'')
                 .then(response => response.text())
                 .then(html => {
                   document.getElementById(''+sDiv+'').innerHTML = html;
+                  $("#myTable").DataTable();
                 })
                 .catch(error => console.error('Error loading HTML:', error));
       }
       Route('Dashboard/Dashboard.html', 'content');
     </script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/dataTables.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/main.min.js"></script>
     <style>
       @media (max-width: 768px) {
         .fc-toolbar {
@@ -78,14 +81,14 @@
         </div>
         <ul class="sidebar-nav" style="padding: 0;text-align: left">
           <li class="sidebar-item">
-            <a href="#" onclick="Route('Dashboard/Dashboard.html', 'content');" class="sidebar-link">
+            <a href="javascript: void(0)" onclick="Route('Dashboard/Dashboard.html', 'content');" class="sidebar-link">
               <i class="fa fa-solid fa-house"></i>
               <span>Dashboard</span>
             </a>
           </li>
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#finance"
@@ -102,24 +105,24 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Finance/fees.html', 'content');" class="sidebar-link">Fees</a>
+                <a href="javascript: void(0)" onclick="Route('Finance/fees.html', 'content');" class="sidebar-link">Fees</a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Finance/income.html', 'content');" class="sidebar-link">Income</a>
+                <a href="javascript: void(0)" onclick="Route('Finance/income.html', 'content');" class="sidebar-link">Income</a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Finance/expenses.html', 'content');" class="sidebar-link">Expenses</a>
+                <a href="javascript: void(0)" onclick="Route('Finance/expenses.html', 'content');" class="sidebar-link">Expenses</a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Finance/staff-salary.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Finance/staff-salary.html', 'content');" class="sidebar-link"
                   >Staff Salary</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Finance/petty-cash.html', 'content');" class="sidebar-link">Petty Cash</a>
+                <a href="javascript: void(0)" onclick="Route('Finance/petty-cash.html', 'content');" class="sidebar-link">Petty Cash</a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Finance/petty-cash-report.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Finance/petty-cash-report.html', 'content');" class="sidebar-link"
                   >Petty Cash Report</a
                 >
               </li>
@@ -127,7 +130,7 @@
           </li>
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#user-account"
@@ -144,27 +147,27 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Users/student-record.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Users/student-record.html', 'content');" class="sidebar-link"
                   >Students</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Users/staff-record.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Users/staff-record.html', 'content');" class="sidebar-link"
                   >Staff</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Users/student-account-information.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Users/student-account-information.html', 'content');" class="sidebar-link"
                   >Student Information</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Users/staff-account-information.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Users/staff-account-information.html', 'content');" class="sidebar-link"
                   >Staff Information</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Users/create-faculty-account.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Users/create-faculty-account.html', 'content');" class="sidebar-link"
                   >Faculty Account</a
                 >
               </li>
@@ -173,7 +176,7 @@
 
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#attendence"
@@ -190,27 +193,27 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Attendance/gpr-attendence.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Attendance/gpr-attendence.html', 'content');" class="sidebar-link"
                   >GPR
                 </a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Attendance/manual-attendence.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Attendance/manual-attendence.html', 'content');" class="sidebar-link"
                   >Manual</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Attendance/add-lecture.html', 'content');" class="sidebar-link">Lecture</a>
+                <a href="javascript: void(0)" onclick="Route('Attendance/add-lecture.html', 'content');" class="sidebar-link">Lecture</a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Attendance/leave.html', 'content');" class="sidebar-link">Leave</a>
+                <a href="javascript: void(0)" onclick="Route('Attendance/leave.html', 'content');" class="sidebar-link">Leave</a>
               </li>
             </ul>
           </li>
 
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#add-view-course"
@@ -227,10 +230,10 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Courses/course.html', 'content');" class="sidebar-link">Add Course</a>
+                <a href="javascript: void(0)" onclick="Route('Courses/course.html', 'content');" class="sidebar-link">Add Course</a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Courses/academic-session.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Courses/academic-session.html', 'content');" class="sidebar-link"
                   >Add Academic Session</a
                 >
               </li>
@@ -239,7 +242,7 @@
 
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#sms"
@@ -256,17 +259,17 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('SMS/send-individual.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('SMS/send-individual.html', 'content');" class="sidebar-link"
                   >Send Individual
                 </a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('SMS/login-information.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('SMS/login-information.html', 'content');" class="sidebar-link"
                   >Login Information</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('SMS/fees-information.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('SMS/fees-information.html', 'content');" class="sidebar-link"
                   >Fees Information</a
                 >
               </li>
@@ -275,7 +278,7 @@
 
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#qec"
@@ -292,24 +295,24 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('QEC/student-course-evalution.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('QEC/student-course-evalution.html', 'content');" class="sidebar-link"
                   >Student Evaluation</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('QEC/teacher-evalution.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('QEC/teacher-evalution.html', 'content');" class="sidebar-link"
                   >Teacher Evaluation</a
                 >
               </li>
               <li class="sidebar-item">
                 <a
-                   href="#" onclick="Route('QEC/student-course-evalution-report.html', 'content');"
+                   href="javascript: void(0)" onclick="Route('QEC/student-course-evalution-report.html', 'content');"
                   class="sidebar-link"
                   >Student Evaluation</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('QEC/teacher-evaluation-report.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('QEC/teacher-evaluation-report.html', 'content');" class="sidebar-link"
                   >Teacher Evaluation</a
                 >
               </li>
@@ -318,7 +321,7 @@
 
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#reception"
@@ -335,12 +338,12 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Reception/letter-manager.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Reception/letter-manager.html', 'content');" class="sidebar-link"
                   >Letter Manager</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Reception/inquiries-manager.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Reception/inquiries-manager.html', 'content');" class="sidebar-link"
                   >Inquiries Manager</a
                 >
               </li>
@@ -349,7 +352,7 @@
 
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#question-bank"
@@ -366,40 +369,40 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('QuestionBank/add-mcqs-question.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('QuestionBank/add-mcqs-question.html', 'content');" class="sidebar-link"
                   >Add MCQ
                 </a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('QuestionBank/add-true-false-question.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('QuestionBank/add-true-false-question.html', 'content');" class="sidebar-link"
                   >Add True/False</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('QuestionBank/generate-question.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('QuestionBank/generate-question.html', 'content');" class="sidebar-link"
                   >Generate</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('QuestionBank/set-header.html', 'content');" class="sidebar-link">Set Header </a>
+                <a href="javascript: void(0)" onclick="Route('QuestionBank/set-header.html', 'content');" class="sidebar-link">Set Header </a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('QuestionBank/active-deactive.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('QuestionBank/active-deactive.html', 'content');" class="sidebar-link"
                   >Active/Deactivate</a
                 >
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('QuestionBank/exam-report.html', 'content');" class="sidebar-link">Exam Report</a>
+                <a href="javascript: void(0)" onclick="Route('QuestionBank/exam-report.html', 'content');" class="sidebar-link">Exam Report</a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('QuestionBank/report-card.html', 'content');" class="sidebar-link">Report Card</a>
+                <a href="javascript: void(0)" onclick="Route('QuestionBank/report-card.html', 'content');" class="sidebar-link">Report Card</a>
               </li>
             </ul>
           </li>
 
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#lms"
@@ -416,19 +419,19 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('LMS/learning-lms.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('LMS/learning-lms.html', 'content');" class="sidebar-link"
                   >Learning LMS
                 </a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('LMS/view-notes.html', 'content');" class="sidebar-link">View Notes</a>
+                <a href="javascript: void(0)" onclick="Route('LMS/view-notes.html', 'content');" class="sidebar-link">View Notes</a>
               </li>
             </ul>
           </li>
 
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#upload-download"
@@ -445,12 +448,12 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Files/upload-assignment.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Files/upload-assignment.html', 'content');" class="sidebar-link"
                   >Assignment
                 </a>
               </li>
               <li class="sidebar-item">
-                <a href="#" onclick="Route('Files/download-assignment.html', 'content');" class="sidebar-link"
+                <a href="javascript: void(0)" onclick="Route('Files/download-assignment.html', 'content');" class="sidebar-link"
                   >Download</a
                 >
               </li>
@@ -459,7 +462,7 @@
 
           <li class="sidebar-item">
             <a
-              href="#"
+              href="javascript: void(0)"
               class="sidebar-link collapsed has-dropdown"
               data-bs-toggle="collapse"
               data-bs-target="#emi"
@@ -476,13 +479,13 @@
               data-bs-parent="#sidebar"
             >
               <li class="sidebar-item">
-                <a href="#" onclick="Route('EMI/remove.html', 'content');" class="sidebar-link">Remove EMI</a>
+                <a href="javascript: void(0)" onclick="Route('EMI/remove.html', 'content');" class="sidebar-link">Remove EMI</a>
               </li>
             </ul>
           </li>
 
           <li class="sidebar-item">
-            <a href="#" onclick="Route('Reports/report.html', 'content');" class="sidebar-link">
+            <a href="javascript: void(0)" onclick="Route('Reports/report.html', 'content');" class="sidebar-link">
               <i class="fa-solid fa-chart-pie"></i>
               <span>Report</span>
             </a>
@@ -501,7 +504,7 @@
           <div class="navbar-collapse collapse">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item dropdown">
-                <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                <a href="javascript: void(0)" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
                   <img
                     src="./images/NoGender.png"
                     class="avatar img-fluid"
@@ -509,11 +512,11 @@
                   />
                 </a>
                 <div class="dropdown-menu dropdown-menu-end rounded">
-                  <a href="#" class="dropdown-item">
+                  <a href="javascript: void(0)" class="dropdown-item">
                     <i class="fa-solid fa-user"></i>
                     Profile
                   </a>
-                  <a href="#" class="dropdown-item">
+                  <a href="javascript: void(0)" class="dropdown-item">
                     <i class="fa-solid fa-gear"></i>
                     Setting
                   </a>
@@ -527,16 +530,16 @@
             </ul>
           </div>
         </nav>
-        <main class="content px-3 py-4" id="content">
+        <main class="content px-3 py-4">
+          <div class="container" id="content"></div>
         </main>
         <div class="footer">
           ©&nbsp;2024 -
-          <a href="#" target="_blank">Terms &amp; Conditions</a>&nbsp;|&nbsp;
-          <a href="#" target="_blank">Privacy Policy</a>&nbsp;|&nbsp;
-          <a href="#" target="_blank">Contact Us</a>
+          <a href="javascript: void(0)" target="_blank">Terms &amp; Conditions</a>&nbsp;|&nbsp;
+          <a href="javascript: void(0)" target="_blank">Privacy Policy</a>&nbsp;|&nbsp;
+          <a href="javascript: void(0)" target="_blank">Contact Us</a>
         </div>
       </div>
     </div>
-    <script src="assets/js/forms.js"></script>
   </body>
 </html>
