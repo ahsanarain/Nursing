@@ -20,21 +20,246 @@
     <script src="assets/js/bootstrap.bundle.min.js" type="application/javascript" defer></script>
     <script src="assets/js/script.js" type="application/javascript" defer></script>
     <script src="assets/js/forms.js" type="application/javascript" defer></script>
+      <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/locales/de_DE.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/geodata/germanyLow.js"></script>
+      <script src="https://cdn.amcharts.com/lib/5/fonts/notosans-sc.js"></script>
     <script>
+
       $(document).ready(function () {
         $("#myTable").DataTable();
       });
+
+      var idiv = 0;
+      var idiv1 = 0;
+      var idiv2 = 0;
+      var idiv3 = 0;
+
       function Route(sPath, sDiv)
       {
         fetch(''+sPath+'')
                 .then(response => response.text())
                 .then(html => {
-                  document.getElementById(''+sDiv+'').innerHTML = html;
-                  $("#myTable").DataTable();
+                    idiv = idiv1 = idiv2 = idiv3  = 0;
+                    document.getElementById(''+sDiv+'').innerHTML = html;
+                    am5.ready(function()
+                    {
+                        var root = am5.Root.new("lineChart");
+
+                        root.setThemes([
+                            am5themes_Animated.new(root)
+                        ]);
+
+                        var chart = root.container.children.push(am5xy.XYChart.new(root, {
+                            panX: true,
+                            panY: true,
+                            wheelX: "panX",
+                            wheelY: "zoomX",
+                            pinchZoomX: true,
+                            paddingLeft:0,
+                            paddingRight:1
+                        }));
+
+                        var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+                        cursor.lineY.set("visible", false);
+
+                        var xRenderer = am5xy.AxisRendererX.new(root, {
+                            minGridDistance: 30,
+                            minorGridEnabled: true
+                        });
+
+                        xRenderer.labels.template.setAll({
+                            rotation: -90,
+                            centerY: am5.p50,
+                            centerX: am5.p100,
+                            paddingRight: 15
+                        });
+
+                        xRenderer.grid.template.setAll({
+                            location: 1
+                        })
+
+                        var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+                            maxDeviation: 0.3,
+                            categoryField: "country",
+                            renderer: xRenderer,
+                            tooltip: am5.Tooltip.new(root, {})
+                        }));
+
+                        var yRenderer = am5xy.AxisRendererY.new(root, {
+                            strokeOpacity: 0.1
+                        })
+
+                        var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+                            maxDeviation: 0.3,
+                            renderer: yRenderer
+                        }));
+
+                        var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+                            name: "Series 1",
+                            xAxis: xAxis,
+                            yAxis: yAxis,
+                            valueYField: "value",
+                            sequencedInterpolation: true,
+                            categoryXField: "country",
+                            tooltip: am5.Tooltip.new(root, {
+                                labelText: "{valueY}"
+                            })
+                        }));
+
+                        series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5, strokeOpacity: 0 });
+                        series.columns.template.adapters.add("fill", function (fill, target) {
+                            return chart.get("colors").getIndex(series.columns.indexOf(target));
+                        });
+
+                        series.columns.template.adapters.add("stroke", function (stroke, target) {
+                            return chart.get("colors").getIndex(series.columns.indexOf(target));
+                        });
+
+                        var data = [{
+                            country: "USA",
+                            value: 2025
+                        }, {
+                            country: "China",
+                            value: 1882
+                        }, {
+                            country: "Japan",
+                            value: 1809
+                        }, {
+                            country: "Germany",
+                            value: 1322
+                        }, {
+                            country: "UK",
+                            value: 1122
+                        }, {
+                            country: "France",
+                            value: 1114
+                        }, {
+                            country: "India",
+                            value: 984
+                        }, {
+                            country: "Spain",
+                            value: 711
+                        }, {
+                            country: "Netherlands",
+                            value: 665
+                        }, {
+                            country: "South Korea",
+                            value: 443
+                        }, {
+                            country: "Canada",
+                            value: 441
+                        }];
+
+                        xAxis.data.setAll(data);
+                        series.data.setAll(data);
+
+                        series.appear(1000);
+                        chart.appear(1000, 100);
+
+                        var root = am5.Root.new("doughnutChart");
+
+                        root.setThemes([
+                            am5themes_Animated.new(root)
+                        ]);
+
+                        var chart = root.container.children.push(
+                            am5percent.PieChart.new(root, {
+                                layout: root.verticalLayout
+                            })
+                        );
+
+// Define data
+                        var data = [{
+                            country: "France",
+                            sales: 100000
+                        }, {
+                            country: "Spain",
+                            sales: 160000
+                        }, {
+                            country: "United Kingdom",
+                            sales: 80000
+                        }];
+
+// Create series
+                        var series = chart.series.push(
+                            am5percent.PieSeries.new(root, {
+                                name: "Series",
+                                valueField: "sales",
+                                categoryField: "country"
+                            })
+                        );
+                        series.data.setAll(data);
+
+// Add legend
+                        var legend = chart.children.push(am5.Legend.new(root, {
+                            centerX: am5.percent(50),
+                            x: am5.percent(50),
+                            layout: root.horizontalLayout
+                        }));
+
+                        legend.data.setAll(series.dataItems);
+                    }); // end am5.ready()
+
+                    $("#myTable").DataTable();
                 })
                 .catch(error => console.error('Error loading HTML:', error));
       }
       Route('Dashboard/Dashboard.html', 'content');
+
+      function showDiv()
+      {
+          if (idiv <= 0 || idiv1 == 0)
+          {
+              $(`#Div_1`).slideDown();
+              idiv++;
+              idiv1 = 1;
+          }
+          else if (idiv == 1 || idiv2 == 0)
+          {
+              $(`#Div_2`).slideDown();
+              idiv++;
+              idiv2 = 1;
+          }
+          else if (idiv == 2 || idiv3 == 0)
+          {
+              $(`#Div_3`).slideDown();
+              idiv++;
+              idiv3 = 1;
+          }
+          else
+          {
+              iziToast.error({timeout: 5000, icon: 'bi bi-exclamation-triangle', position: "bottomLeft", title: 'Warning', message: 'NO More Qualification'});
+          }
+
+          return false;
+      }
+
+      function hideDiv(i)
+      {
+          if (i == 1)
+          {
+              $(`#Div_`+i).slideUp();
+              idiv--;
+              idiv1 = 0;
+          }
+          else if (i == 2)
+          {
+              $(`#Div_`+i).slideUp();
+              idiv--;
+              idiv2 = 0;
+          }
+          else if (i == 3)
+          {
+              $(`#Div_`+i).slideUp();
+              idiv--;
+              idiv3 = 0;
+          }
+
+          return false;
+      }
     </script>
     <style>
       @media (max-width: 768px) {
