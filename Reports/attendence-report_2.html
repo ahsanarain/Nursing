@@ -8,7 +8,7 @@
 
     <!-- Expenses Section -->
     <div class="mb-3">
-      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Attendance Report</h3></div>
+      <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Attendance Report</h3></div>
 
       <div class="row">
         <div class="col-12">
@@ -17,7 +17,7 @@
               <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
 
                 <!-- Subject -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="course" class="form-label">Subject</label>
                   <select class="input-field" id="course" name="course">
                     <option value="">Select Subject</option>
@@ -29,9 +29,9 @@
                 </div>
 
                 <!-- Course -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="course" class="form-label">Course</label>
-                  <select class="input-field" id="course" name="course">
+                  <select class="input-field" id="course2" name="course">
                     <option value="">Select Course</option>
                     <option value="Course1">Course 1</option>
                     <option value="Course2">Course 2</option>
@@ -41,7 +41,7 @@
                 </div>
 
                 <!-- Session -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="session" class="form-label">Session</label>
                   <select class="input-field" id="session" name="session">
                     <option value="">Select Session</option>

@@ -2,16 +2,10 @@
     <!-- Expenses Section -->
     <div class="mb-3">
 
-      <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Petty Cash Management</h3></div>
+      <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Petty Cash Management</h3></div>
 
-      <div class="row">
-        <div class="col-12">
-
-
-
-          <div class="card shadow-sm mb-4 registration-card">
-            <div class="card-body">
-
+      <div class="card shadow-sm mb-4 registration-card row">
+        <div class="card-body col-12">
               <form class="row gy-3" action="" onsubmit="return AddForm();" method="post">
                 <!-- Initial Amount Section -->
                 <div class="col-md-4 input-wrap">
@@ -30,24 +24,12 @@
                   <button type="submit" class="btn btn-primary">Set Initial Amount</button>
                 </div>
               </form>
-
-
-            </div>
-          </div>
-
         </div>
       </div>
 
-      <hr class="my-4">
-
-      <div class="row">
-        <div class="col-12">
-
-
+      <div class="card shadow-sm mb-4 registration-card row">
+        <div class="card-body col-12">
           <!-- Student Registration Section -->
-          <div class="card shadow-sm mb-4 registration-card">
-            <div class="card-body">
-
               <form class="row gy-3" action="" onsubmit="return AddForm();" method="post">
                 <!-- Transaction Section -->
                 <div class="col-md-3 input-wrap">
@@ -71,27 +53,16 @@
                 </div>
               </form>
 
-
-            </div>
-          </div>
-
         </div>
       </div>
 
-      <hr class="my-4">
-
       <!-- Edit Transaction Section -->
-      <div class="row">
-        <div class="col-12">
-
-
+      <div class="card shadow-sm mb-4 registration-card row">
+        <div class="card-body col-12">
 
           <!-- Student Registration Section -->
-          <div class="card shadow-sm mb-4 registration-card">
-            <div class="card-body">
-
               <form class="row gy-3" action="" onsubmit="return AddForm();" method="post">
-                <div class="col-md-4">
+                <div class="col-md-4 input-wrap">
                   <label for="select-initial" class="form-label">Amount</label>
                   <select class="input-field" aria-label="select-initial" id="select-initial">
                     <option selected>Select an amount</option>
@@ -113,20 +84,14 @@
                   <button type="reset" class="btn btn-danger">Delete</button>
                 </div>
               </form>
-
-
-            </div>
-          </div>
-
         </div>
       </div>
 
-      <hr class="my-4">
-
       <!-- Transactions Table -->
-      <h3 class="fw-bold fs-4 my-3">Transaction History</h3>
-      <div class="row">
-        <div class="col-12">
+      <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Transaction History</h3></div>
+
+      <div class="card shadow-sm mb-4 row">
+        <div class="card-body col-12">
           <div class="table-responsive">
             <table id="myTable" class="table table-hover table-bordered table-striped text-center">
               <thead class="table-primary">

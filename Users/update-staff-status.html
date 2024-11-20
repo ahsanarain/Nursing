@@ -6,30 +6,26 @@
       </a>
     </div>
 
-    <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Update Staff</h3></div>
+    <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Update Staff</h3></div>
 
     <div class="card shadow-sm question-card">
       <div class="card-body">
 
         <!-- Current Status -->
-        <h4>Current Status: <span><strong>Active</strong></span></h4>
+        <h4><strong>Current Status: </strong><span>Active</span></h4>
 
         <!-- Update Staff Form -->
         <form id="updateStaffForm" action="" onsubmit="return AddForm();" method="post">
-          <div class="row g-3">
-
-            <!-- Update Status -->
-            <div class="col-md-6">
-              <div class="form-check">
-                <input type="radio" class="form-check-input" id="deactiveStatus" name="status" value="Deactive" required>
-                <label for="deactiveStatus" class="form-check-label"><strong>Update Status as (Deactive)</strong></label>
-              </div>
-            </div>
+          <div class="row g-3 text-center">
 
             <!-- Image Preview -->
-            <div class="col-md-6">
-              <label for="photoPreview" class="form-label"><strong>Photo Preview</strong></label>
-              <img id="photoPreview" src="images/NoGender.png" alt="Photo Preview" class="img-thumbnail" style="display: block; width: 100px;">
+            <div class="col-md-12">
+              <img id="photoPreview" src="images/NoGender.png" alt="Photo Preview" class="img-thumbnail" style="width: 100px;border-radius: 50%;">
+            </div>
+
+            <div class="col-md-12">
+                <input type="radio" class="form-check-input" id="deactiveStatus" name="status" value="Deactive" required>
+                <label for="deactiveStatus" class="form-check-label"><strong>Update Status as (Deactivate)</strong></label>
             </div>
 
             <!-- Action Buttons -->

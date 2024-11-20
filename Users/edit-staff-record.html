@@ -6,7 +6,7 @@
       </a>
     </div>
 
-    <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Update Staff</h3></div>
+    <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Update Staff</h3></div>
 
     <div class="card shadow-sm question-card">
       <div class="card-body">
@@ -14,6 +14,11 @@
         <!-- Add Fees Form -->
         <form id="addFeesForm" action="" onsubmit="return AddForm();" method="post">
           <div class="row g-3">
+
+            <!-- Image Preview -->
+            <div class="col-md-12 text-center">
+              <img id="photoPreview" src="images/NoGender.png" alt="Photo Preview" class="img-thumbnail" style=" width: 100px;border-radius: 50%;">
+            </div>
 
             <!-- Name -->
             <div class="col-md-6 input-wrap">
@@ -68,13 +73,6 @@
               <label for="photo" class="form-label"><strong>Upload Photo</strong></label>
               <input type="file" class="input-field" id="photo" name="photo" accept="image/*" onchange="previewImage(event)" required>
             </div>
-
-            <!-- Image Preview -->
-            <div class="col-md-6">
-              <label for="photoPreview" class="form-label"><strong>Photo Preview</strong></label>
-              <img id="photoPreview" src="images/NoGender.png" alt="Photo Preview" class="img-thumbnail" style="display: block; width: 100px;">
-            </div>
-
 
             <!-- Action Buttons -->
             <div class="col-12 d-flex justify-content-end gap-2 mt-3" style="justify-content:center !important;">

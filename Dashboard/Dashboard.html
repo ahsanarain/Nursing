@@ -4,7 +4,7 @@
 
     <!-- Dashboard Stats -->
     <div class="row">
-        <div class="col-12 col-md-3 mb-4">
+        <div class="col-md-3 mb-4 ">
             <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
                 <span style="font-size: 25px;" class="WebHR_Title2">532</span>
                 <span style="float: right; padding: 5px;">
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-3 mb-4">
+        <div class="col-md-3 mb-4 ">
             <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
                 <span style="font-size: 25px;" class="WebHR_Title2">50</span>
                 <span style="float: right; padding: 5px;">
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-3 mb-4">
+        <div class="col-md-3 mb-4 ">
             <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
                 <span style="font-size: 25px;" class="WebHR_Title2">100</span>
                 <span style="float: right; padding: 5px;">
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-3 mb-4">
+        <div class="col-md-3 mb-4 ">
             <div style="padding:10px 10px 10px 10px;" class="whr_box whr_box_info">
                 <span style="font-size: 25px;" class="WebHR_Title2">450</span>
                 <span style="float: right; padding: 5px;">
@@ -66,8 +66,8 @@
     </div>
 
     <!-- Table Section -->
-    <div class="row">
-        <div class="col-12">
+    <div class="card row">
+        <div class="col-12 card-body">
             <div class="table-responsive shadow-sm">
                 <table
                         id="myTable"
@@ -116,18 +116,22 @@
     </div>
 
     <style>
-        #doughnutChart, #lineChart {
-            width: 100%;
-            height: 500px;
-        }
+    #doughnutChart, #lineChart
+    {
+        width: 100%;
+        height: 500px;
+    }
     </style>
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="mb-4 bold-font">Students</h2>
-            <div id="doughnutChart"></div>
-        </div>
-        <div class="col-md-12">
-            <h2 class="mb-4 bold-font">Fees</h2>
+    <div class="card mt-4 row">
+        <div class="col-md-12 card-body">
+            <h2 class="mb-4 bold-font align-items-center">Fees</h2>
             <div id="lineChart"></div>
+        </div>
+    </div>
+
+    <div class="card mt-4 row">
+        <div class="col-md-12 card-body">
+            <h2 class="mb-4 bold-font align-items-center">Students</h2>
+            <div id="doughnutChart"></div>
         </div>
     </div>

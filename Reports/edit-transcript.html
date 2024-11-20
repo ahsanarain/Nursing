@@ -2,23 +2,29 @@
 
     <!-- Back Button -->
     <div class="mb-4" style="text-align: right;">
-      <a href="javascript: void(0)" onclick="Route('Reports/report.html', 'content');" class="btn btn-primary" >
+      <a href="javascript: void(0)" onclick="Route('Reports/transcript.html', 'content');" class="btn btn-primary" >
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
     <!-- Expenses Section -->
     <div class="mb-3">
-      <h3 class="fw-bold fs-4 mb-4">Transcript</h3>
-      <hr class="my-4" />
-      <div class="row">
-        <div class="col-12">
-          <div class="card shadow-sm mb-4 registration-card">
-            <div class="card-body">
+      <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Transcript</h3></div>
+
+      <div class="card shadow-sm mb-4 registration-card row">
+        <div class="card-body col-12">
               <form class="row gy-3" action="" onsubmit="return AddForm();" method="post">
-                <h4 class="fw-bold fs-4 mb-4">
-                  Student Grade Input Form
-                </h4>
-                <hr class="my-2" />
+                <div class="card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Student Grade Input Form</h3></div>
+
+
+                <div class="col-md-12 text-center align-items-center">
+                  <img
+                          id="photoPreview"
+                          src="images/NoGender.png"
+                          alt="Photo Preview"
+                          class="img-thumbnail"
+                          style="width: 100px;border-radius: 50%;"
+                  />
+                </div>
 
                 <!-- Enrollment No -->
                 <div class="col-md-12 input-wrap">
@@ -122,18 +128,6 @@
                   />
                 </div>
                 <!-- Image Preview -->
-                <div class="col-md-4">
-                  <label for="photoPreview" class="form-label"
-                  ><strong>Photo Preview</strong></label
-                  >
-                  <img
-                          id="photoPreview"
-                          src="images/NoGender.png"
-                          alt="Photo Preview"
-                          class="img-thumbnail"
-                          style="display: block; width: 100px"
-                  />
-                </div>
 
                 <!-- Submit Button -->
                 <div class="col-12 text-center">
@@ -142,15 +136,13 @@
                   </button>
                 </div>
               </form>
-            </div>
-          </div>
         </div>
       </div>
-      <hr class="my-4" />
       <!-- Transactions Table -->
-      <h3 class="fw-bold fs-4 my-3">Transaction History</h3>
-      <div class="row">
-        <div class="col-12">
+      <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Transcript History</h3></div>
+
+      <div class="card shadow-sm mb-4 registration-card row">
+        <div class="card-body col-12">
           <div class="table-responsive">
             <table
                     id="myTable"
