@@ -1,12 +1,9 @@
-
-
     <!-- Back Button -->
     <div class="mb-4" style="text-align: right;">
       <a href="javascript: void(0)" onclick="Route('Attendance/manual-attendence.html', 'content');" class="btn btn-primary" >
         <i class="fa-solid fa-arrow-left"></i>
       </a>
     </div>
-
     <!-- Petty Cash Management Section -->
     <div class="mb-3">
       <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Add Attendance</h3></div>
@@ -19,7 +16,7 @@
           <div class="card shadow-sm question-card">
             <div class="card-body">
 
-              <form class="row g-3" action="" onsubmit="return AddAttendance();" method="post">
+              <form class="row g-3" action="" onsubmit="return false;" method="post">
                 <!-- Course Selection -->
                 <div class="col-md-3 input-wrap">
                   <label for="select-course" class="form-label fw-bold">Course</label>
@@ -50,7 +47,7 @@
 
                 <!-- Submit Button -->
                 <div class="col-md-3 d-flex align-items-end">
-                  <button class="btn btn-primary w-100 shadow-sm" id="addAttendance">Add Class Attendance</button>
+                  <button class="btn btn-primary w-100 shadow-sm" id="addAttendance" onclick="Route('Attendance/daily-add-attendance.html', 'content');">Add Class Attendance</button>
                 </div>
               </form>
 

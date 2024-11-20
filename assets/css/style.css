@@ -614,3 +614,51 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px;
   overflow:visible;
 }
+
+.attendance-toggle {
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+  align-items: initial;
+}
+
+.attendance-toggle input[type="radio"] {
+  display: none;
+}
+
+.attendance-toggle .toggle-label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ddd;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Color changes when radio is selected */
+.attendance-toggle input[type="radio"]:checked+.toggle-label {
+  transform: scale(1.1);
+  color: white;
+}
+
+/* Specific colors for each option */
+#present_15:checked+.toggle-label {
+  background-color: #4caf50;
+  /* Green for Present */
+}
+
+#absent_15:checked+.toggle-label {
+  background-color: #f44336;
+  /* Red for Absent */
+}
+
+#leave_15:checked+.toggle-label {
+  background-color: #ffc107;
+  /* Yellow for Leave */
+}
+
+/* Hover effect */
+.attendance-toggle .toggle-label:hover {
+  opacity: 0.8;
+}
