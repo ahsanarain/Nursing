@@ -1,0 +1,57 @@
+
+    <!-- Back Button -->
+    <div class="mb-4" style="text-align: right;" xmlns="http://www.w3.org/1999/html">
+      <a href="javascript: void(0)" onclick="Route('Attendance/add-visit.html', 'content');" class="btn btn-primary" >
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+    <!-- Fees Section -->
+    <div class="mb-3">
+      <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Visits</h3></div>
+
+      <div class="row card shadow-sm mb-4 profile-card card-body" style="flex-direction:row;">
+        <h3 class="col-4 card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">Generic BSN</h3>
+        <h3 class="col-4 card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">GBSN-2021-24</h3>
+        <h3 class="col-4 card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">DATED 01-10-2024</h3>
+      </div>
+
+      <div class="card shadow-sm mb-4 row">
+        <div class="card-body col-12">
+          <!-- DataTable -->
+          <form onsubmit="return AddForm();" action="" method="POST" enctype="multipart/form-data" id="form">
+            <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center" style="width: 100%">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Photo</th>
+                <th>ID</th>
+                <th>Course</th>
+                <th>Session</th>
+                <th>Student Name</th>
+                <th>Attendance</th>
+                <th>Date</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td><img src="images/NoGender.png" alt="Student Photo" class="img-thumbnail border-0 bg-transparent" style="width: 50px;"></td>
+                <td>1145</td>
+                <td>Generic BSN</td>
+                <td>GBSN-2024-27</td>
+                <td>Ahmed Khan</td>
+                <td><div class="form-group"><input type="text" class="form-control" style="width: 100px;"></div></td>
+                <td>01-Oct-2024</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary">Add Visit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+
+    </div>

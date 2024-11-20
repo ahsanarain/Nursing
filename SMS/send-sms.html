@@ -1,0 +1,67 @@
+
+    <!-- Back Button -->
+    <div class="mb-4" style="text-align: right;" xmlns="http://www.w3.org/1999/html">
+      <a href="javascript: void(0)" onclick="Route('SMS/send-individual.html', 'content');" class="btn btn-primary" >
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+
+    <!-- SMS Section -->
+    <div class="mb-3">
+      <div class="row card shadow-sm mb-4 profile-card card-body"><h3 class="card-title fw-bold fs-4" style="text-align: center;margin-bottom: 0;">SMS</h3></div>
+
+      <!-- Template Selection -->
+      <div class="card shadow-sm mb-4 card-body row mb-4 align-items-center text-center">
+        <div class="col-auto ">
+          <label for="template" class="form-label me-2"><strong>Template</strong></label>
+        </div>
+        <div class="col-auto">
+          <select class="form-select w-auto" id="template" name="template">
+            <option value="">Select SMS Template</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-4 row">
+        <div class="card-body col-12">
+          <!-- DataTable -->
+          <div class="table-responsive">
+            <table id="myTable" class="table table-hover table-bordered table-striped text-center" style="width: 100%">
+              <thead class="table-primary">
+              <tr>
+                <th>S.No.</th>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Session</th>
+                <th>Contact</th>
+                <th>Reference</th>
+                <th>Dues</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td><img src="images/NoGender.png" alt="Student Photo" class="img-thumbnail border-0 bg-transparent" style="width: 50px;"></td>
+                <td>Amir Khan</td>
+                <td>GBSN-2021-24</td>
+                <td>Generic BSN</td>
+                <td>+923003567595</td>
+                <td></td>
+                <td>545000</td>
+                <td>
+                  <div class="d-flex justify-content-lg-start gap-2">
+                    <button class="btn btn-sm btn-outline-success" title="Send SMS">
+                      Send<i class="bi bi-whatsapp"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>

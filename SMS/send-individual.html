@@ -11,7 +11,7 @@
           <div class="card shadow-sm mb-4 registration-card">
             <div class="card-body">
 
-              <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+              <form class="row g-3" action="" onsubmit="return false;" method="post">
                 <div class="col-md-6 col-lg-4 input-wrap">
                   <label for="course-select" class="form-label">Course</label>
                   <select class="input-field" id="course-select" name="course">
@@ -37,7 +37,7 @@
 
 
                 <div class="col-12 col-lg-4 d-flex align-items-center">
-                  <button type="submit" class="btn btn-primary w-100">SMS</button>
+                  <button type="submit" class="btn btn-primary w-100" onclick="Route('SMS/send-sms.html', 'content');">SMS</button>
                 </div>
               </form>
 

@@ -17,7 +17,7 @@
           <div class="card shadow-sm question-card">
             <div class="card-body">
 
-              <form class="row g-3" action="" onsubmit="return AddForm();" method="post">
+              <form class="row g-3" action="" onsubmit="return false;" method="post">
                 <!-- Course Selection -->
                 <div class="col-md-3 input-wrap">
                   <label for="select-course" class="form-label fw-bold">Course</label>
@@ -48,7 +48,7 @@
 
                 <!-- Submit Button -->
                 <div class="col-md-3 d-flex align-items-center">
-                  <button type="submit" class="btn btn-primary w-100 shadow-sm">Add Class Attendance</button>
+                  <button type="submit" class="btn btn-primary w-100 shadow-sm" onclick="Route('Attendance/save-visit.html', 'content');">Add Visit</button>
                 </div>
               </form>
 
